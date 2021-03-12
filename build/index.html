@@ -10,10 +10,10 @@
 </head>
 
 <body>
-	<div class="container-content">
-		<nav class="nav nav-aside">
+	<div class="content-container d-flex">
+		<nav class="nav nav-aside nav-aside--pad">
 			<logo> <img src="img/Logo.png" alt="Логотип" /></logo>
-			<ul class="nav__list">
+			<ul class="nav__list nav__list--bottom-line nav__list--pad mt-70">
 				<li class="nav__item"> <a class="nav__link" href="#">Брови</a></li>
 				<li class="nav__item"> <a class="nav__link" href="#">Глаза</a></li>
 				<li class="nav__item"> <a class="nav__link" href="#">Губы</a></li>
@@ -22,10 +22,22 @@
 				<li class="nav__item"> <a class="nav__link" href="#">Пирсинг</a></li>
 			</ul>
 		</nav>
-		<main class="container-content__main">
-			<header class="header headder--sticky"></header>
+		<main class="content-container__main">
+			<header class="header">
+				<div class="contacts-area contacts--sticky"><svg class="icon" width="16px" height="16px">
+						<use xlink:href="#icon-insta"></use>
+					</svg>
+					<address class="address-office"></address>
+					<address class="phone"></address>
+				</div>
+			</header>
 		</main>
-	</div>
+	</div><svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+		<symbol id="icon-insta" width="16" height="16" viewBox="0 0 16 16">
+			<path d="M0 0V16H16V0H0ZM7.97203 12.4755C5.50117 12.4755 3.4965 10.4615 3.4965 7.99068C3.4965 5.51981 5.50117 3.51515 7.97203 3.51515C10.4522 3.51515 12.4569 5.51981 12.4569 7.99068C12.4569 10.4615 10.4522 12.4755 7.97203 12.4755ZM13.296 3.56177C12.8019 3.56177 12.4009 3.16084 12.4009 2.66667C12.4009 2.17249 12.8019 1.77156 13.296 1.77156C13.7902 1.77156 14.1911 2.17249 14.1911 2.66667C14.1911 3.16084 13.7902 3.56177 13.296 3.56177Z"></path>
+			<path d="M7.97204 10.648C9.43965 10.648 10.6294 9.4583 10.6294 7.99069C10.6294 6.52308 9.43965 5.33334 7.97204 5.33334C6.50443 5.33334 5.3147 6.52308 5.3147 7.99069C5.3147 9.4583 6.50443 10.648 7.97204 10.648Z"></path>
+		</symbol>
+	</svg>
 	<script src="./libs/jquery/jquery.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>

@@ -1,0 +1,39 @@
+.nav-aside {
+    width: 340px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+
+    &--pad {
+        padding: 12px 60px 60px 70px;
+    }
+}
+.nav__list {
+    list-style-type: none;
+    padding-left: 0;
+
+    &--bottom-line {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 32px;
+            height: 1.5px;
+            background: @color-standart;
+        }
+    }
+
+    &--pad {
+        padding: 10px 0;
+    }
+}
+
+.nav__link {
+    text-decoration: none;
+    font-family: "Circe-Regular";
+    font-size: @font-standart;
+    line-height: @line-height-standart;
+    color: black;
+}
