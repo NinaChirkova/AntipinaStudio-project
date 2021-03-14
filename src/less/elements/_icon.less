@@ -1,0 +1,19 @@
+.icon {
+
+}
+
+.icon--side-line {
+    position: relative;
+    display: inline-block;
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -12px;
+        width: 1px;
+        height: 100%;
+        background: white;
+    }
+}

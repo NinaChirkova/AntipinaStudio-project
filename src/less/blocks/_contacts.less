@@ -1,0 +1,43 @@
+.contacts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    display: flex;
+    justify-content: right;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 14px 0 24px;
+
+    &:nth-child(2) {
+        margin-right: 100px;
+    }
+}
+.contacts--sticky {
+
+}
+.contacts__location,
+.contacts__phone {
+    display: flex;
+    flex-direction: column;
+
+    .remark {
+        font-size: @font-remark;
+        line-height: 1.5;
+    }
+}
+
+.contacts__location,
+.contacts__phone,
+.contacts__phone a {
+    font-family: 'Circe-Regular';
+    font-size: @font-standart;
+    color: #FFFFFF;
+    line-height: @line-height-standart;
+    text-decoration: none;
+}
+
+.contacts__phone {
+
+}
