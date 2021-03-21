@@ -11,6 +11,35 @@
     padding: 14px 0 24px;
 }
 
+.contacts--sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: #FFFFFF;    
+    animation: fixedMenu 1s forwards;
+    z-index: 1;
+
+    .contacts__item,
+    .contacts__item a {
+        color: #000000;
+    }
+
+    .icon--side-line::after {
+        background: #000000;
+    }
+}
+
+@keyframes fixedMenu {
+    0% {        
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .contacts__item {
     &:nth-child(1) {
         margin-right: 100px;
@@ -18,9 +47,6 @@
     margin-right: 90px;
 }
 
-.contacts--sticky {
-
-}
 .contacts__location,
 .contacts__phone {
     display: flex;
