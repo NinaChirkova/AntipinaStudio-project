@@ -136,8 +136,8 @@ gulp.task('copy:libs', function (callback) {
 	gulp.src('node_modules/jquery/dist/**/*.*')
 		.pipe(gulp.dest('./build/libs/jquery'));
 
-	// gulp.src('node_modules/bootstrap/dist/**/*.*')
-	// 	.pipe(gulp.dest('./build/libs/bootstrap'))
+	gulp.src('node_modules/slick-carousel/slick/**/*.*')
+		.pipe(gulp.dest('./build/libs/slick-carousel'))
 
 	gulp.src('node_modules/normalize.css/normalize.css')
 		.pipe(gulp.dest('./build/libs/normalize/'));

@@ -7,6 +7,15 @@
     font-size: 72px;
     line-height: 60px;
     color: #FFFFFF;
+    
+    transform: translateY(120%);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.title--header._active {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .subtitle {
@@ -14,4 +23,14 @@
     font-size: 35px;
     line-height: 40px;
     color: #FFFFFF;
+
+    transform: translateY(120%);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.subtitle._active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.8s ease 0.2s;
 }
