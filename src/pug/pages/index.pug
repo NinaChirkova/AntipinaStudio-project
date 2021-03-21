@@ -28,16 +28,23 @@ block content
                 .header__slider 
                     img(src="../img/big-size/portraite-main-page.jpg", alt="" class="img img-stopper")
                 .contacts.contacts--sticky
-                    a(href="#" class="icon icon--side-line") 
+                    a(href="#" class="contacts__item icon icon--side-line") 
                         svg(width="16px" height="16px") 
                             use(xlink:href="#icon-insta")
-                    address.contacts__location
+                    address.contacts__item.contacts__location
+                        svg(width="12px" height="16px") 
+                            use(xlink:href="#icon-location")
                         | Иваново, ул. Жиделева 21 #[span(class="remark") (Дербенев Центр) офис 301]
-                    address.contacts__phone
+                    address.contacts__item.contacts__phone
                         a(href="tel:+79621636644") 
                             | +7 (962) 163-66-44
                         span.remark
                             | Пн—Сб, 10:00 — 19:00
+                .header__title
+                    h2.title.title--header 
+                        | Подчеркнём неуловимое
+                    .subtitle 
+                        | Подчеркнём притягательность и естественную #[br] красоту вашего лица
 
     
     
