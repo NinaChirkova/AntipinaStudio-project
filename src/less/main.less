@@ -16,6 +16,7 @@
 @import "../less/elements/_icon.less";
 @import "../less/elements/_img.less";
 @import "../less/elements/_title.less";
+@import "../less/elements/_logo.less";
 
 
 * {
@@ -34,10 +35,22 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
 .d-flex {
     display: flex;
 }
 
 .flex-no-wrap {
     flex-wrap: nowrap;
+}
+
+.br-d-none {
+    display: none;
+
+    @media(min-width: 1150px) {
+        display: block;
+    }
 }
