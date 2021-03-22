@@ -108,4 +108,19 @@ window.onload = function() {
 	      navToggleSvg.addClass("active");
 	    }
 	}
+
+    // Slider
+    $(document).ready(function(){
+        $('.header__slider').slick({
+            lazyLoad: 'progressive',
+            arrows: false,
+            dots: false,
+            autoplay: true,
+            speed: 2000,
+            easing: 'ease-in'
+        });
+    });
 };
+
+
+  

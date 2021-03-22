@@ -5,14 +5,15 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 	<link rel="stylesheet" href="./libs/normalize/normalize.css" />
+	<link rel="stylesheet" href="./libs/slick-carousel/slick.css" />
 	<link rel="stylesheet" href="./css/main.css" />
 	<title>Main page</title>
 </head>
 
 <body>
 	<div class="content-container d-flex flex-no-wrap">
-		<nav class="nav nav-aside nav-aside--pad">
-			<div class="nav-aside__wrapper">
+		<nav class="nav nav-aside">
+			<div class="nav-aside__wrapper nav-aside__wrapper--pad">
 				<div class="logo logo--d-none"><img src="img/Logo.png" alt="Логотип" /></div>
 				<ul class="nav__list nav__list--bottom-line nav__list--pad mt-70">
 					<li class="nav__item"> <a class="nav__link" href="#">Брови</a></li>
@@ -22,11 +23,12 @@
 					<li class="nav__item"> <a class="nav__link" href="#">Татуировки</a></li>
 					<li class="nav__item"> <a class="nav__link" href="#">Пирсинг</a></li>
 				</ul>
+				<div class="btn__wrapper"><button class="btn btn--light btn--size btn--mt" type="button">ЗАПИСЬ</button><button class="btn btn--dark btn--size btn--d-none" type="button">бесплатная консультация</button></div>
 			</div>
 		</nav>
 		<main class="content-container__main">
 			<header class="header">
-				<div class="header__slider"> <img class="img img-stopper" src="../img/big-size/portraite-main-page.jpg" alt="" /></div>
+				<div class="header__slider"> <img class="img img-stopper" src="../img/big-size/portraite-main-page.jpg" alt="" /><img class="img img-stopper" src="../img/big-size/portraite-main-page.jpg" alt="" /><img class="img img-stopper" src="../img/big-size/portraite-main-page.jpg" alt="" /></div>
 				<div class="contacts">
 					<div class="contacts__wrapper contacts__wrapper--d-none"><a class="contacts__item icon icon--side-line" href="#"> <svg width="16px" height="16px">
 								<use xlink:href="#icon-insta"></use>
@@ -72,6 +74,7 @@
 		</symbol>
 	</svg>
 	<script src="./libs/jquery/jquery.min.js"></script>
+	<script src="./libs/slick-carousel/slick.min.js"></script>
 	<script src="./js/main.js"></script>
 </body>
 

@@ -1,27 +1,31 @@
-.nav-aside {
+.nav-aside {    
     position: fixed;
     left: 0;
     top: 0;
     width: 0;
+    opacity: 0;
     height: 100vh;
     background: #ffffff;
     z-index: 3;
-    transition: all 0.8s ease;
+    transition: width 0.8s ease;
 
-    &--open {
+    &--open {        
         width: 100%;
-        padding: 12px 60px 60px 50px;
+        opacity: 1;
+    }
+
+    &__wrapper {
+        &--pad {
+           padding: 12px 60px 60px 50px;  
+        }
     }
 
     @media(min-width: 992px) {
+        opacity: 1;
         position: relative;
-        width: 390px;
+        min-width: 340px;
         height: 100vh;
         background: rgb(255, 255, 255);
-
-        &--pad {
-            padding: 12px 60px 60px 70px;
-        }
     }
 }
 
@@ -30,6 +34,10 @@
         position: fixed;
         z-index: 2;
         width: auto;
+
+        &--pad {
+            padding: 12px 60px 60px 70px;
+        }
     }
 }
 

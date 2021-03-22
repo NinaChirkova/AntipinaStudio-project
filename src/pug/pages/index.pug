@@ -15,8 +15,8 @@ block variables
 block content 
 
     .content-container.d-flex.flex-no-wrap
-        nav.nav.nav-aside.nav-aside--pad
-            .nav-aside__wrapper
+        nav.nav.nav-aside
+            .nav-aside__wrapper.nav-aside__wrapper--pad
                 .logo.logo--d-none
                     img(src="img/Logo.png" alt="Логотип")
                 ul.nav__list.nav__list--bottom-line.nav__list--pad.mt-70
@@ -24,10 +24,17 @@ block content
                         li.nav__item 
                             a(href="" + item.url class="nav__link")
                                 | #{item.name}
+                .btn__wrapper
+                    button(class="btn btn--light btn--size btn--mt" type="button")
+                        | ЗАПИСЬ
+                    button(class="btn btn--dark btn--size btn--d-none" type="button")
+                        | бесплатная консультация
 
         main.content-container__main
             header.header
                 .header__slider 
+                    img(src="../img/big-size/portraite-main-page.jpg", alt="" class="img img-stopper")
+                    img(src="../img/big-size/portraite-main-page.jpg", alt="" class="img img-stopper")
                     img(src="../img/big-size/portraite-main-page.jpg", alt="" class="img img-stopper")
                 .contacts
                     .contacts__wrapper.contacts__wrapper--d-none
