@@ -18,7 +18,7 @@
     opacity: 1;
 }
 
-.subtitle {
+.title__description {
     font-family: 'Circe-Light';
     font-size: 21px;
     line-height: 24px;
@@ -29,10 +29,17 @@
     transition: all 0.8s ease;
 }
 
-.subtitle._active {
+.title__description._active {
     transform: translateY(0);
     opacity: 1;
     transition: all 0.8s ease 0.2s;
+}
+
+.subtitle {
+    font-family: 'Circe-Bold';
+    font-size: 35px;
+    line-height: 52px;
+    color: #000000;
 }
 
 @media(min-width: 576px) {
@@ -41,7 +48,7 @@
         line-height: 55px;
     } 
 
-    .subtitle {
+    .title__description {
         font-size: 26px;
         line-height: 30px;
     }
@@ -53,7 +60,7 @@
     line-height: 48px;
     } 
 
-    .subtitle {
+    .title__description {
         font-size: 32px;
         line-height: 38px;
     }
@@ -65,7 +72,7 @@
         line-height: 50px;
     } 
 
-    .subtitle {
+    .title__description {
         font-size: 30px;
         line-height: 34px;
     }
@@ -77,7 +84,7 @@
         line-height: 60px;
     } 
 
-    .subtitle {
+    .title__description {
         font-size: 35px;
         line-height: 40px;
     }

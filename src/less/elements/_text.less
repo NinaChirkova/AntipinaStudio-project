@@ -1,0 +1,40 @@
+.text {
+    font-family: 'Circe-Regular';
+    
+
+    &--standart {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &--emphasize {
+        font-size: 21px;
+        line-height: 31px;
+    }
+
+    &--dark {
+        color: #000000;
+    }
+
+    &--bottom-line {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -1.25em;
+            left: 0;
+            width: 32px;
+            height: 1.5px;
+            background: @color-standart;
+        }
+    }
+
+    @media(min-width: 768px) {
+
+        &--emphasize {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
