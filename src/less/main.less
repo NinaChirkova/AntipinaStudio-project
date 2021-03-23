@@ -11,6 +11,7 @@
 @import "../less/blocks/_nav.less";
 @import "../less/blocks/_contacts.less";
 @import "../less/blocks/_block-about.less";
+@import "../less/blocks/_service-card.less";
 
 // Elements
 @import "../less/elements/_svg.less";
@@ -40,6 +41,8 @@ a {
 
 h1, h2, h3, h4, p {
     margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 
 .d-flex {
@@ -58,3 +61,20 @@ h1, h2, h3, h4, p {
     }
 }
 
+.aspect-ratio-box {
+    overflow: hidden;
+    padding-top: 351px / 390px * 100%;
+    position: relative;
+}
+
+.aspect-ratio-box-inside {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 25px;
+}

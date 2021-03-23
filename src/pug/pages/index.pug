@@ -31,18 +31,16 @@ block content
                         | Подчеркнём неуловимое
                     p.title__description.anim-item._anim-no-hide
                         | Подчеркнём притягательность и естественную #[br(class="br-d-none")] красоту вашего лица
-            section.block-about.block-about--margin
-                img(src="../img/portraits/owner-portrait.jpg", alt="owner-portrait" width='730px' height="700px" class="block-about__photo")
-                .block-about__description
-                    h2.subtitle 
-                        | Ксения Антипина
-                    p.text.text--emphasize.text--dark.text--bottom-line
-                        | Чемпион 2018 года по татуажу, Мастер, коуч, хозяйка студии
-                    p.text.text--standart.text--dark
-                        | В мою студию обращаются женщины, которые хотят создать новый образ, хотят нравится себе и мужчинам. Мы помогаем им заново открыть себя и стать красивее. Наш конёк  — естественная ухоженность лица и минимальные усилия по её поддержанию дома.
-                    p.text.text--standart.text--dark
-                        | Мы умеем подчеркивать достоинства и скрывать недостатки. Изящные брови сделают ваше лицо выразительным. Татуаж век придаст взгляду дополнительный блеск. Красивые губы добавят чувственности. А может быть, вы хотите подчеркнуть статус, добавить сексуальности, вернуть молодость, показать профессиональную состоятельность и харизму? Мы это тоже умеем.
-                    p.text.text--standart.text--dark 
-                        | Можно годами завидовать идеальной форме бровей Камиллы Белль. А можно прийти к нам и подобрать форму и оттенок подходящие именно вашему лицу. И если вам надоело каждый день красить ресницы — мы легко избавим вас от этой рутины. За 6 лет работы мы помогли почти 500 женщинам осуществить мечту о красоте и свободе.
+            include ../sections/_about.pug
+
+            section.service.service__wrapper
+                .service-card
+                    .aspect-ratio-box
+                        img(src="../img/service-cards/color-brows.jpg", alt="Оформление и окрашивание бровей" width="390px" height="351px" class="service-card__bg")
+                        .aspect-ratio-box-inside
+                            h3.service-card__title.service-card__title--light
+                                | Оформление и окрашивание бровей
+                            button(class="btn btn--light btn--size" type="button")
+                                | ЗАПИСЬ
     
     include ../sections/_svg.pug
