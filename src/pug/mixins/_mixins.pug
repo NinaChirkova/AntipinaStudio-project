@@ -32,3 +32,19 @@ mixin cardMasters(img1, img2, alt, name, position)
                         | ЗАПИСЬ
                     button(class="btn btn--dark btn--size btn--d-none" type="button")
                         | бесплатная консультация
+
+mixin commentCard(text, name, date)
+    .comment-card 
+        .comment-card__rating 
+            .rating-result
+                span.active
+                span.active
+                span.active
+                span.active
+                span
+        .comment-card__text.comment-card__text--dark.comment-card__text--margin
+            | #{text}
+        .comment-card__name.comment-card__name--margin
+            | #{name}
+        .comment-card__date
+            | #{date}

@@ -107,19 +107,20 @@ window.onload = function() {
 	    } else {
 	      navToggleSvg.addClass("active");
 	    }
-	}
+	};
+
 
     // Slider
-    $(document).ready(function(){
-        $('.header__slider').slick({
-            lazyLoad: 'progressive',
-            arrows: false,
-            dots: false,
-            autoplay: true,
-            speed: 2000,
-            easing: 'ease-in'
-        });
+    $('.header__slider').slick({
+        lazyLoad: 'progressive',
+        arrows: false,
+        dots: false,
+        autoplay: true,
+        speed: 2000,
+        easing: 'ease-in'       
     });
+
+    
 
     $('.sertificates__wrapper').magnificPopup({
         delegate: '.aspect-ratio-box-inside', // child items selector, by clicking on it popup will open
