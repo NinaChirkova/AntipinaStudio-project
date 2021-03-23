@@ -34,13 +34,11 @@ block content
             include ../sections/_about.pug
 
             section.service.service__wrapper
-                .service-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="Оформление и окрашивание бровей" width="390px" height="351px" class="service-card__bg")
-                        .aspect-ratio-box-inside
-                            h3.service-card__title.service-card__title--light
-                                | Оформление и окрашивание бровей
-                            button(class="btn btn--light btn--size" type="button")
-                                | ЗАПИСЬ
-    
+                +cardService("color-brows.jpg", "Оформление и окрашивание бровей", "Оформление и окрашивание бровей")
+                +cardService("microblending-brows.jpg", "Микроблейдинг бровей и татуаж", "Микроблейдинг бровей и татуаж")
+                +cardService("tatoo-brows.jpg", "Татуаж бровей в технике «напыления»", "Татуаж бровей в технике «напыления»")
+                +cardService("tatoo-lips.jpg", "Татуаж губ акварельная техника", "Татуаж губ акварельная техника")
+                +cardService("microblending-tatoo.jpg", "Микроблейдинг бровей и татуаж", "Микроблейдинг бровей и татуаж")
+                +cardService("tatoo-eyelash.jpg", "Татуаж стрелки и меж-реснички", "Татуаж стрелки и меж-реснички")
+                
     include ../sections/_svg.pug
