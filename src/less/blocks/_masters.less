@@ -1,0 +1,151 @@
+.masters__wrapper {
+    justify-content: space-between;
+
+    @media(min-width: 992px) {
+        justify-content: flex-end;
+        transform: translateX(1%);
+    }
+}
+
+.masters-card {
+    position: relative;
+    width: 49%;
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        // filter: grayscale(1) brightness(44%);
+    }
+
+    &__name {
+        position: relative;
+        font-family: 'Circe-Bold';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.48;
+
+        &--light {
+            color: #FFFFFF;
+        }
+    }
+
+    &__position {
+        position: relative;
+        font-family: 'Circe-Regular';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+
+        &--light {
+            color: #FFFFFF;
+        }
+    }
+
+    &:nth-child(n+3) {
+        margin-top: 15px;
+    }
+
+    // &:hover,
+    // &:focus,
+    // &:active {
+    //     .masters-card__bg {
+    //         animation: changeCardColor 0.4s linear forwards; 
+    //     }
+    // }
+
+    .aspect-ratio-box {
+        overflow: hidden;
+        padding-top: 519px / 373px * 100%;
+        position: relative;
+    }
+    
+    .aspect-ratio-box-inside {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 25px 25px;
+    
+        @media(min-width: 1200px) {
+    
+        }
+    
+        @media(min-width: 1420px) {
+            padding: 45px 30px;
+        }
+    }
+
+    @media(min-width: 768px) {
+        width: 32.3%;
+
+        &:nth-child(n+3) {
+            margin-top: 0;
+        }
+
+        &:nth-child(n+4) {
+            margin-top: 15px;
+        }
+    }
+
+    @media(min-width: 992px) {
+        width: 45%;
+        margin-right: 1%;
+
+        &:nth-child(n+4) {
+            margin-top: 0;
+        }
+
+        &:nth-child(n+3) {
+            margin-top: 10px;
+        }
+
+        &__name {
+            font-size: 25px;
+        }
+
+    }
+
+    @media(min-width: 1200px) {
+        width: 32%;
+
+        &:nth-child(n+3) {
+            margin-top: 0;
+        }
+
+        &:nth-child(n+4) {
+            margin-top: 25px;
+        }
+    }
+
+    @media(min-width: 1300px) {
+        width: 24%;
+
+        &__name {
+            font-size: 22px;
+        }
+
+        &:nth-child(n+4) {
+            margin-top: 0;
+        }
+
+        &:nth-child(n+5) {
+            margin-top: 25px;
+        }
+    }
+
+    @media(min-width: 1400px) {
+        &__name {
+            font-size: 25px;
+        }
+    }
+}

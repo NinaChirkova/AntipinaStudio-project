@@ -120,6 +120,12 @@ window.onload = function() {
             easing: 'ease-in'
         });
     });
+
+    $('.sertificates__wrapper').magnificPopup({
+        delegate: '.aspect-ratio-box-inside', // child items selector, by clicking on it popup will open
+        type: 'image'
+        // other options
+      });
 };
 
 

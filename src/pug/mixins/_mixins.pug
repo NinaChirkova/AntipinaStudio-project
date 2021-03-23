@@ -11,7 +11,20 @@ mixin cardService(img, alt, title)
 mixin cardSertificate(img, alt, title)
     .sertificate-card
         .aspect-ratio-box
-            img(src="../img/sertificate/"+ img, alt=""+ alt width="390" height="351" class="sertificate-card__bg")
+            a(href="../img/sertificate/"+ img) 
+                img(src="../img/sertificate/"+ img, alt=""+ alt width="527" height="368" class="sertificate-card__bg")
             .aspect-ratio-box-inside
                 h3.sertificate-card__title.sertificate-card__title--light
                     | #{title}
+
+mixin cardMasters(img, alt, name, position)
+    .masters-card
+        .aspect-ratio-box
+            img(src="../img/portraits/"+ img, alt=""+ alt width="373" height="519" class="masters-card__bg")
+            .aspect-ratio-box-inside
+                .masters-card__name.masters-card__name--light
+                    | #{name}
+                .masters-card__position.masters-card__position--light
+                    | #{position}
+                button(class="btn btn--light btn--size btn--mt20 btn--size-small" type="button")
+                    | ЗАПИСЬ
