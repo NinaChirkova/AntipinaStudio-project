@@ -142,8 +142,8 @@ gulp.task('copy:libs', function (callback) {
 	gulp.src('node_modules/normalize.css/normalize.css')
 		.pipe(gulp.dest('./build/libs/normalize/'));
 
-	// gulp.src('node_modules/wow.js/dist/**/*.*')
-	// 	.pipe(gulp.dest('./build/libs/wowJs'))
+	gulp.src('node_modules/magnific-popup/dist/**/*.*')
+		.pipe(gulp.dest('./build/libs/magnific-popup'))
 
 	// gulp.src('node_modules/wow.js/css/**/*.*')
 	// 	.pipe(gulp.dest('./build/libs/wowJs'))
