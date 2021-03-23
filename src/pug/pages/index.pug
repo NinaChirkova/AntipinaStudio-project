@@ -27,11 +27,14 @@ block content
                 include ../sections/_contacts.pug
 
                 .header__title
-                    h2.title.title--header.anim-item._anim-no-hide
+                    h2.title--header.anim-item._anim-no-hide
                         | Подчеркнём неуловимое
                     p.title__description.anim-item._anim-no-hide
                         | Подчеркнём притягательность и естественную #[br(class="br-d-none")] красоту вашего лица
             include ../sections/_about.pug
+
+            h2.title.title--d-none.title--bottom-line.title--margin
+                | Услуги
 
             section.service.service__wrapper
                 +cardService("color-brows.jpg", "Оформление и окрашивание бровей", "Оформление и окрашивание бровей")
@@ -40,5 +43,15 @@ block content
                 +cardService("tatoo-lips.jpg", "Татуаж губ акварельная техника", "Татуаж губ акварельная техника")
                 +cardService("microblending-tatoo.jpg", "Микроблейдинг бровей и татуаж", "Микроблейдинг бровей и татуаж")
                 +cardService("tatoo-eyelash.jpg", "Татуаж стрелки и меж-реснички", "Татуаж стрелки и меж-реснички")
+
+            h2.title.title--d-none.title--bottom-line.title--margin
+                | Сертификаты
+
+            section.sertificates.sertificates__wrapper
+                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
+                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
+                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
+                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
+                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
                 
     include ../sections/_svg.pug

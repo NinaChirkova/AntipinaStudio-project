@@ -6,6 +6,7 @@
 // sections
 @import "../less/sections/_content-container.less";
 @import "../less/sections/_header.less";
+@import "../less/sections/_sertificate.less";
 
 // Blocks
 @import "../less/blocks/_nav.less";
@@ -59,28 +60,3 @@ h1, h2, h3, h4, p {
     }
 }
 
-.aspect-ratio-box {
-    overflow: hidden;
-    padding-top: 351px / 390px * 100%;
-    position: relative;
-}
-
-.aspect-ratio-box-inside {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 25px 25px;
-
-    @media(min-width: 1200px) {
-
-    }
-
-    @media(min-width: 1420px) {
-        padding: 40px 25px;
-    }
-}

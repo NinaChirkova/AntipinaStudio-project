@@ -7,3 +7,11 @@ mixin cardService(img, alt, title)
                     | #{title}
                 button(class="btn btn--light btn--size btn--mt20 btn--size-small" type="button")
                     | ЗАПИСЬ
+
+mixin cardSertificate(img, alt, title)
+    .sertificate-card
+        .aspect-ratio-box
+            img(src="../img/sertificate/"+ img, alt=""+ alt width="390" height="351" class="sertificate-card__bg")
+            .aspect-ratio-box-inside
+                h3.sertificate-card__title.sertificate-card__title--light
+                    | #{title}

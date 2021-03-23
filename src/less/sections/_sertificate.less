@@ -1,23 +1,13 @@
-.service__wrapper,
 .sertificates__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
 
-    @media(min-width: 768px) {
-        justify-content: flex-end;
+    @media(min-width: 992px) {
+        margin-top: 200px;
     }
 }
 
-.service-card {
+.sertificate-card {
     position: relative;
     width: 50%;
-    // transition: all 0.4s linear;
-
-    button {
-        opacity: 0;
-        transition: opacity 0.4s linear;
-    }    
 
     &__bg {
         position: absolute;
@@ -37,35 +27,23 @@
         font-weight: 300;
         font-size: 16px;
         line-height: 1.2;
-        transform: translateY(100%);
-        transition: transform 0.4s linear;
 
         &--light {
             color: #FFFFFF;
         }
     }
 
-    &--pad {
-        // padding: 280px 25px 104px;
-    }
-
     &:hover,
     &:focus,
     &:active {
-        .service-card__bg {
+        .sertificate-card__bg {
             animation: changeCardColor 0.4s linear forwards; 
-        }
-        button {
-            opacity: 1;
-        }
-        .service-card__title {
-            transform: translateY(0);
         }
     }
 
     .aspect-ratio-box {
         overflow: hidden;
-        padding-top: 351px / 390px * 100%;
+        padding-top: 369px / 528px * 100%;
         position: relative;
     }
     
@@ -79,15 +57,9 @@
         width: 100%;
         height: 100%;
         padding: 25px 25px;
-    
-        @media(min-width: 1200px) {
-    
-        }
-    
-        @media(min-width: 1420px) {
-            padding: 40px 25px;
-        }
     }
+
+
 
     @media(min-width: 476px) {
 
@@ -100,7 +72,6 @@
 
         &__title {
             font-size: 24px;
-            transform: translateY(60%);
         }
     }
 
@@ -131,6 +102,10 @@
         &__title {
             font-size: 32px;
         }
+
+        .aspect-ratio-box-inside {
+            padding: 40px 25px;
+        }
     }
 
     @media(min-width: 1520px) {
@@ -144,20 +119,4 @@
             font-size: 40px;
         }
     }
-}
-
-@keyframes changeCardColor {
-    0% {
-        filter: grayscale(1) brightness(44%);
-    }
-    45% {
-        filter: grayscale(0.65) brightness(65%);
-    }
-    75% {
-        filter: grayscale(0.35) brightness(85%);
-    }
-    100% {
-        filter: grayscale(0) brightness(100%);
-    }
-
 }
