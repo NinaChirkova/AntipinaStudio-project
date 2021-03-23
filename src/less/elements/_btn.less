@@ -19,8 +19,21 @@
         margin-top: 20px;
     }
 
+    &--changed {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & .btn:last-child {
+            margin-top: 20px;
+        }
+    }
+
     @media(min-width: 576px) {
         width: 70%;
+        &--changed {
+            width: fit-content;
+        }
     }
 
     @media(min-width: 768px) {
