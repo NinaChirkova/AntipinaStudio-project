@@ -84,7 +84,7 @@ window.onload = function () {
         e.preventDefault();
         navList.toggleClass(navListOpen);
         mobile.toggleClass(menuFixed);
-        logoSvg.toggleClass('logo-text--dark');
+        logoSvg.addClass('logo-text--dark');
 
         navButtonToggle();
     });

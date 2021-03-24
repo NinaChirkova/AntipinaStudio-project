@@ -127,19 +127,25 @@
     display: flex;
     flex-direction: column;
 
-    svg .svg-icon {
-        fill: #000000 !important;
-    }
     &__item {
+        position: relative;
         display: flex;
         flex-direction: column;
+        padding-left: 30px;
+        margin-top: 15px;
+
+        img {
+            position: absolute;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            top: 6px;
+        }
 
         .remark {
             font-size: @font-remark;
             line-height: 1.5;
-        }
-
-        
+        }       
     }
 
     &__item,

@@ -6,19 +6,25 @@
     opacity: 0;
     height: 100vh;
     background: #ffffff;
-    z-index: 3;
+    z-index: -1;
     transition: width 0.8s ease;
+
+    &--pad {
+        opacity: 0;
+        transition: opacity 0.4s ease-in 0.4s;
+    }
 
     &--open {        
         width: 100%;
         opacity: 1;
-    }
+        z-index: 3;
 
-    &__wrapper {
-        &--pad {
-           padding: 12px 60px 60px 50px;  
+        .nav-aside--pad {
+            opacity: 1;
+            padding: 12px 60px 60px 50px;  
         }
     }
+    
 
     @media(min-width: 992px) {
         opacity: 1;
@@ -26,6 +32,11 @@
         min-width: 340px;
         height: 100vh;
         background: rgb(255, 255, 255);
+        z-index: 3;
+
+        &--pad {
+            opacity: 1;
+        }
     }
 }
 
@@ -33,11 +44,10 @@
     .nav-aside .nav-aside__wrapper {
         position: fixed;
         z-index: 2;
-        width: auto;
-
-        &--pad {
-            padding: 12px 60px 60px 70px;
-        }
+        width: auto;        
+    }
+    .nav-aside--pad {
+        padding: 12px 60px 60px 70px;
     }
 }
 

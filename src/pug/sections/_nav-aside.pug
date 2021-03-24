@@ -1,30 +1,29 @@
 nav.nav.nav-aside
-    .nav-aside__wrapper.nav-aside__wrapper--pad
-        .logo.logo--d-none
-            img(src="img/Logo.png" alt="Логотип")
-        ul.nav__list.nav__list--bottom-line.nav__list--pad.mt-70
-            for item in menuAsideItems 
-                li.nav__item 
-                    a(href="" + item.url class="nav__link")
-                        | #{item.name}
-        .contacts-menu                     
-            address.contacts-menu__item.contacts-menu__location
-                svg(width="24px" height="24px")
-                    use(xlink:href="#icon-location")
-                | Иваново, ул. Жиделева 21 #[span(class="remark") (Дербенев Центр) офис 301]
-            address.contacts-menu__item.contacts-menu__phone
-                svg(width="24px" height="24px")
-                    use(xlink:href="#icon-phone")
-                a(href="tel:+79621636644") 
-                    | +7 (962) 163-66-44
-                span.remark
-                    | Пн—Сб, 10:00 — 19:00
-            a(href="#" class="contacts-menu__item icon--dark") 
-                svg(width="24px" height="24px") 
-                    use(xlink:href="#icon-insta")
-                | Antipinastudio
-        .btn__wrapper
-            button(class="btn btn--light btn--size btn--mt" type="button")
-                | ЗАПИСЬ
-            button(class="btn btn--dark btn--size btn--d-none" type="button")
-                | бесплатная консультация
+    .nav-aside__wrapper
+        .nav-aside--pad
+            .logo.logo--d-none
+                img(src="img/Logo.png" alt="Логотип")
+            ul.nav__list.nav__list--bottom-line.nav__list--pad.mt-70
+                for item in menuAsideItems 
+                    li.nav__item 
+                        a(href="" + item.url class="nav__link")
+                            | #{item.name}
+            .contacts-menu                     
+                address.contacts-menu__item.contacts-menu__location
+                    img(src="./img/icons/location.svg", alt="icon-location")
+                    p Иваново, ул. Жиделева 21
+                    span(class="remark") (Дербенев Центр) офис 301
+                address.contacts-menu__item.contacts-menu__phone
+                    img(src="./img/icons/phone.svg", alt="icon-phone")
+                    a(href="tel:+79621636644") 
+                        | +7 (962) 163-66-44
+                    span.remark
+                        | Пн—Сб, 10:00 — 19:00
+                a(href="#" class="contacts-menu__item icon--dark") 
+                    img(src="./img/icons/insta.svg", alt="icon-insta")
+                    | Antipinastudio
+            .btn__wrapper
+                button(class="btn btn--light btn--size btn--mt" type="button")
+                    | ЗАПИСЬ
+                button(class="btn btn--dark btn--size btn--d-none" type="button")
+                    | бесплатная консультация
