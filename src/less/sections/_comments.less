@@ -9,7 +9,7 @@
 }
 
 .comment-card {
-    max-width: 30%;
+    
     width: fit-content;
     background: #F9F9F9;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -49,6 +49,18 @@
         font-size: 14px;
         line-height: 1.5;
         color: rgba(0, 0, 0, 0.6);
+    }
+
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    @media(min-width: 576px) {
+        max-width: 30%;
+
+        &:not(:first-child) {
+            margin-top: 0;
+        }
     }
 
     @media(min-width: 1200px) {

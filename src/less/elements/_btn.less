@@ -1,5 +1,6 @@
 .btn {
     position: relative;
+    display: block;
     font-family: 'Circe-Regular';
     font-size: 14px;
     line-height: 1.5;
@@ -29,10 +30,19 @@
         }
     }
 
+    &--mobile {
+        width: 95%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     @media(min-width: 576px) {
         width: 70%;
         &--changed {
             width: fit-content;
+        }
+        &--mobile {
+            display: none;
         }
     }
 
@@ -45,6 +55,11 @@
     }
 }
 
+.btn--center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .btn--size {
     width: auto;
     padding: 0.71em 2.5em;
@@ -52,6 +67,11 @@
     @media(min-width: 992px) {
         width: fit-content;
     }
+}
+
+.btn--size-narrow {
+    width: 94%;
+    padding: 0.71em 2.5em;
 }
 
 .btn--size-small {
@@ -105,6 +125,12 @@
 .btn--d-none {
 
     @media(min-width: 992px) {
+        display: none;
+    }
+}
+
+.btn-d-none-small {
+    @media(min-width: 576px) {
         display: none;
     }
 }
