@@ -1,0 +1,123 @@
+.nav-helper {
+    width: 100%;
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 35px 30px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    color: #000000;
+
+    &__item {
+        display: flex;
+        
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        &--documents {
+            flex-direction: column;
+            width: 100%;
+
+            span {
+                font-family: 'Circe-Bold';
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 21px;
+                text-transform: uppercase;
+                margin-bottom: 12px;
+            }
+
+            a {
+                font-family: 'Circe-Regular';
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 19px;
+                color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        &--ancors {
+            flex-direction: column;
+            width: 100%;
+            font-family: 'Circe-Regular';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            text-transform: uppercase;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            a {
+                margin-top: 20px;
+            }
+        }
+
+        &--insta {
+            flex-wrap: nowrap;
+            align-items: center;
+            margin-top: 40px;
+            width: 100%;
+            border-top: 1px solid rgba(0, 0, 0, 0.3);
+            padding-top: 25px;
+
+            img {
+                margin-right: 10px;
+            }
+        }
+
+    }
+
+    &--margin {
+        margin-top: 100px;
+    }
+
+    @media(min-width: 768px) {
+        &__item--ancors {
+            flex-direction: row;
+            width: 60%;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                margin-top: 0;
+            }
+            
+        }
+        &__item--documents {
+            width: auto;
+        }
+    }
+
+    @media(min-width: 992px) {
+        width: calc(100% + 340px);
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        transform: translateX(-340px);
+
+        &__item--ancors {
+            width: 54%;
+        }
+
+        &__item--insta {
+            margin-top: 0;
+            width: auto;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        &--margin {
+            margin-top: 300px;
+        }
+    }
+
+    @media(min-width: 1200px) {
+
+        padding: 35px 70px 40px;
+
+        &__item--ncors {
+            width: 50%;
+        }
+    }
+}

@@ -31,143 +31,32 @@ block content
                         | Подчеркнём неуловимое
                     p.title__description.anim-item._anim-no-hide
                         | Подчеркнём притягательность и естественную #[br(class="br-d-none")] красоту вашего лица
+            
             include ../sections/_about.pug
+            include ../sections/_services.pug
+            include ../sections/_sertificates.pug
+            include ../sections/_masters.pug
+            include ../sections/_comments.pug
+            include ../sections/_insta.pug
+            include ../sections/_address.pug
+            include ../sections/_form.pug
 
-            h2.title.title--d-none.title--bottom-line.title--margin
-                | Услуги
+            section.nav-helper.nav-helper--margin
+                .nav-helper__item.nav-helper__item--documents
+                    span ANTIPINA STUDIO, 2021
+                    a(href="#")  Политика конфидециальности
+                    a(href="#")  Документы
+                .nav-helper__item.nav-helper__item--ancors
+                    a(href="#masters") Мастера
+                    a(href="#proposals") Акции
+                    a(href="#services") Услуги
+                    a(href="#comments") отзывы
+                    a(href="#contacts") контакты
+                .nav-helper__item.nav-helper__item--insta
+                    img(src="./img/icons/insta.svg", alt="icon-insta")
+                    a(href="#" class="")
+                        | Antipinastudio
 
-            section.service.service__wrapper
-                +cardService("color-brows.jpg", "Оформление и окрашивание бровей", "Оформление и окрашивание бровей")
-                +cardService("microblending-brows.jpg", "Микроблейдинг бровей и татуаж", "Микроблейдинг бровей и татуаж")
-                +cardService("tatoo-brows.jpg", "Татуаж бровей в технике «напыления»", "Татуаж бровей в технике «напыления»")
-                +cardService("tatoo-lips.jpg", "Татуаж губ акварельная техника", "Татуаж губ акварельная техника")
-                +cardService("microblending-tatoo.jpg", "Микроблейдинг бровей и татуаж", "Микроблейдинг бровей и татуаж")
-                +cardService("tatoo-eyelash.jpg", "Татуаж стрелки и меж-реснички", "Татуаж стрелки и меж-реснички")
-
-            h2.title.title--d-none.title--bottom-line.title--margin
-                | Сертификаты
-
-            section.sertificates.sertificates__wrapper
-                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
-                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
-                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
-                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
-                +cardSertificate('sertificate.jpg', 'Сертификат BACKTAGE', 'Сертификат BACKTAGE')
-                
-            h2.title.title--bottom-line.title--margin
-                | Мастера
-            section.masters__wrapper                 
-                +cardMasters("owner.jpg", "master-portrait-1.jpg", "Ксения Антипина", "Ксения Антипина", "Руководитель, мастер")
-                +cardMasters("master1.jpg", "master-portrait-1.jpg", "Ксения Антипина", "Ксения Антипина", "Руководитель, мастер")
-                +cardMasters("owner.jpg", "master-portrait-1.jpg", "Ксения Антипина", "Ксения Антипина", "Руководитель, мастер")
-                +cardMasters("master1.jpg", "master-portrait-1.jpg", "Ксения Антипина", "Ксения Антипина", "Руководитель, мастер")
-
-            h2.title.title--bottom-line.title--margin
-                | Отзывы
-            section.comments.comments__wrapper
-                .comments__slider
-                    +commentCard("Салон который я могу ответственно рекомендовать друзьям и знакомым. И главное с каждым годом уровень их растёт. В студии всегда чисто, стерильно и уютно как будто приходишь к старым друзьям.", "Ксения Антипина", "20.02.2021")
-                    +commentCard("Салон который я могу ответственно рекомендовать друзьям и знакомым. И главное с каждым годом уровень их растёт. В студии всегда чисто, стерильно и уютно как будто приходишь к старым друзьям.", "Ксения Антипина", "20.02.2021")
-                    +commentCard("Салон который я могу ответственно рекомендовать друзьям и знакомым. И главное с каждым годом уровень их растёт. В студии всегда чисто, стерильно и уютно как будто приходишь к старым друзьям.", "Ксения Антипина", "20.02.2021")
-                    +commentCard("Салон который я могу ответственно рекомендовать друзьям и знакомым. И главное с каждым годом уровень их растёт. В студии всегда чисто, стерильно и уютно как будто приходишь к старым друзьям.", "Ксения Антипина", "20.02.2021")
-                    +commentCard("Салон который я могу ответственно рекомендовать друзьям и знакомым. И главное с каждым годом уровень их растёт. В студии всегда чисто, стерильно и уютно как будто приходишь к старым друзьям.", "Ксения Антипина", "20.02.2021")
-                    +commentCard("Салон который я могу ответственно рекомендовать друзьям и знакомым. И главное с каждым годом уровень их растёт. В студии всегда чисто, стерильно и уютно как будто приходишь к старым друзьям.", "Ксения Антипина", "20.02.2021")
-                a(href="" class="btn btn--dark btn--size-narrow btn--mt20 btn--size btn-d-none-small btn--center")
-                    | Все отзывы
-
-            h2.title.title--bottom-line.title--margin
-                | Наш инстаграм
-            section.insta__wrapper
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-                .insta-card
-                    .aspect-ratio-box
-                        img(src="../img/service-cards/color-brows.jpg", alt="" class="aspect-ratio-box-inside")
-            .btn__wrapper.btn__wrapper--mobile
-                button(class="btn btn--light btn--size btn--mt20 btn--size" type="button")
-                    | подписаться
-                button(class="btn btn--dark btn--size btn--d-none" type="button")
-                    | посмотреть
-            h2.title.title--bottom-line.title--margin
-                | Акции
-            section.proposals__wrapper
-                .aspect-ratio-box
-                    img(src="", alt="Proposal" class="aspect-ratio-box-inside")
-            .btn__wrapper.btn__wrapper--mobile
-                button(class="btn btn--light btn--size btn--mt20 btn--size" type="button")
-                    | ЗАПИСЬ
-                button(class="btn btn--dark btn--size btn--d-none" type="button")
-                    | бесплатная консультация
-
-            h2.title.title--bottom-line.title--margin.title--d-none-lg
-                | Контакты
-            section.address.address--margin
-                .address__map
-                    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20665.543784663907!2d40.94227686996034!3d57.01392136710601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414d14361d85d0d5%3A0xe613b79b57545880!2z0YPQuy4g0JbQuNC00LXQu9C10LLQsCwgMjEsINCY0LLQsNC90L7QstC-LCDQmNCy0LDQvdC-0LLRgdC60LDRjyDQvtCx0LsuLCAxNTMwMDI!5e0!3m2!1sru!2sru!4v1616602201715!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy")
-                .address__contacts.address__contacts--pad
-                    h2.title.title--bottom-line-left.title--pos-left.title--contacts-margin.title--d-block-lg
-                        | Контакты
-                    .contacts__elem
-                        img(src="./img/icons/phone.svg", alt="icon-phone")
-                        a(href="tel:+79621636644" class="")
-                            | +7 (962) 163-66-44
-                    .contacts__elem
-                        img(src="./img/icons/location.svg", alt="icon-location")
-                        p
-                            | Иваново, ул. Жиделева 21 (Дербенев Центр) офис 301
-                    .contacts__elem
-                        img(src="./img/icons/clock.svg", alt="icon-clock")
-                        p
-                            | Режим работы: Пн—Сб, 10:00 — 19:00
-                    .contacts__elem
-                        img(src="./img/icons/insta.svg", alt="icon-insta")
-                        a(href="#" class="")
-                            | Antipinastudio
-            .btn__wrapper.btn__wrapper--mobile
-                button(class="btn btn--light btn--size btn--mt20 btn--size" type="button")
-                    | ЗАПИСЬ
-                button(class="btn btn--dark btn--size btn--d-none" type="button")
-                    | бесплатная консультация
-
-            section.form-consultation.form-consultation--size.form-consultation--margin
-                h3.subtitle.subtitle--small
-                    | Бесплатная консультация #[br]у Ксении Антипиной
-                p.text.text--standart.text--dark.mt-15
-                    | За 1 час подберём для идеальную форму, цвет, технику. #[br]Сделаем эскиз макияжа. Расскажем о процедурах и уходе. 
-                form(action="POST")
-                    input(type="text" name="clientName" id="clientName" placeholder="Ваше имя" class="text text--standart")
-                    input(type="email" name="clientEmail" id="clientEmail" placeholder="Ваша электронная почта" class="text text--standart")
-                    input(type="phone" name="clientPhone" id="clientPhone" placeholder="Ваш номер телефона" class="text text--standart")
-                    select(name="timeToCall" class="text text--standart")
-                        option(value="none" hidden="") Когда Вам лучше позвонить
-                        option(value="09.00 - 10.00") 09.00 - 10.00
-                        option(value="10.00 - 11.00") 10.00 - 11.00
-                        option(value="11.00 - 12.00") 11.00 - 12.00
-                        option(value="12.00 - 13.00") 12.00 - 13.00
-                        option(value="13.00 - 14.00") 13.00 - 14.00
-                    button(class="btn btn--dark btn--size-form" type="submit")
-                        | позвоните мне
+            
 
     include ../sections/_svg.pug

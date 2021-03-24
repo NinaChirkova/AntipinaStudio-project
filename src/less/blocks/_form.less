@@ -22,6 +22,14 @@
             padding: 15px;
             text-align-last: center;
             margin-bottom: 20px;
+            transition: border 0.3s linear;
+
+            &:hover,
+            &:focus,
+            &:active {
+                outline: none;
+                border: 0.5px solid rgba(0, 0, 0, 0.8);
+            }
         }
 
         select {
