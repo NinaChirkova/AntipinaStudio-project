@@ -7,6 +7,21 @@
     margin-left: auto;
     margin-right: auto;
 
+    &--d-none-lg {
+
+        @media(min-width: 1400px) {
+            display: none;
+        }
+    }
+
+    &--d-block-lg {
+        display: none;
+
+        @media(min-width: 1400px) {
+            display: block;
+        }
+    }
+
     &--bottom-line {
         position: relative;
 
@@ -21,10 +36,27 @@
             transform: translateX(-50%);
         }
     }
+    &--bottom-line-left {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: #000;
+            bottom: -10px;
+            left: 0;
+        }
+    }
     
     &--margin {
         margin-top: 80px;
         margin-bottom: 60px;
+    }
+
+    &--contacts-margin {
+        margin-bottom: 100px;
     }
 
     @media(min-width: 992px) {

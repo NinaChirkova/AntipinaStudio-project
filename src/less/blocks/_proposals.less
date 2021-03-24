@@ -1,0 +1,36 @@
+.proposals__wrapper {
+    width: 100%;
+    font-size: 0;
+    
+
+    .aspect-ratio-box {
+        overflow: hidden;
+        padding-top: 462px / 375px * 100%;
+        position: relative;
+    }
+
+    .aspect-ratio-box-inside {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: #000;
+    }
+
+    @media(min-width: 576px) {
+        .aspect-ratio-box {
+            padding-top: 580px / 1183px * 100%;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .aspect-ratio-box {
+            padding-top: 580px / 1583px * 100%;
+        }
+    }
+}
