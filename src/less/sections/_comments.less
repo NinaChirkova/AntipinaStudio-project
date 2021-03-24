@@ -1,6 +1,11 @@
 .comments__wrapper {
     position: relative;
     max-width: 100%;
+    width: 100%;
+
+    @media(min-width: 992px) {
+        width: calc(100vw - 340px);
+    }
 }
 
 .comment-card {
@@ -8,8 +13,9 @@
     width: fit-content;
     background: #F9F9F9;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 45px 30px 45px 42px;
+    padding: 35px 20px 35px 30px;
     margin: 0 15px;
+
 
     &__text {
         font-family: 'Circe-Regular';
@@ -43,6 +49,10 @@
         font-size: 14px;
         line-height: 1.5;
         color: rgba(0, 0, 0, 0.6);
+    }
+
+    @media(min-width: 1200px) {
+        padding: 45px 30px 45px 42px;
     }
 
 }

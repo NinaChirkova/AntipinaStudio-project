@@ -7,13 +7,13 @@ window.onscroll = () => {
     const Y = window.scrollY;
     const navAside = document.querySelector('.nav-aside');
 
-    if(!navAside.classList.contains('nav-aside--open')) {
-        if(Y > 50) {
+    if (!navAside.classList.contains('nav-aside--open')) {
+        if (Y > 50) {
             headerContacts.classList.add('contacts--sticky');
             svgIconInsta.style.cssText = "fill: #000000";
             svgIconLocation.style.cssText = "fill: #000000";
             logoSvg.classList.add('logo-text--dark');
-        } else if(Y < 50) {
+        } else if (Y < 50) {
             headerContacts.classList.remove('contacts--sticky');
             svgIconInsta.style.fill = "#FFFFFF";
             svgIconLocation.style.fill = "#FFFFFF";
@@ -21,17 +21,17 @@ window.onscroll = () => {
         }
     }
 
-    
+
 }
 
 // Animation
 
 let animItems = document.querySelectorAll('.anim-item');
 
-if(animItems.length > 0) {
+if (animItems.length > 0) {
     window.addEventListener('scroll', animOnScroll);
     function animOnScroll(params) {
-        for(let i = 0; i < animItems.length; i++) {
+        for (let i = 0; i < animItems.length; i++) {
             const animItem = animItems[i];
             const animItemHeight = animItem.offsetHeight;
             const animItemOffset = offset(animItem).top;
@@ -39,16 +39,16 @@ if(animItems.length > 0) {
 
             let animItemPoint = window.innerHeight - animItemHeight / animStart;
 
-            if(animItemHeight > window.innerHeight) {
+            if (animItemHeight > window.innerHeight) {
                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
             }
 
-            if(pageYOffset > (animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+            if (pageYOffset > (animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
                 animItem.classList.add('_active');
             } else {
-                if(!animItem.classList.contains('_anim-no-hide')) {
+                if (!animItem.classList.contains('_anim-no-hide')) {
                     animItem.classList.remove('_active');
-                }               
+                }
             }
         }
     }
@@ -56,7 +56,7 @@ if(animItems.length > 0) {
     setTimeout(() => {
         animOnScroll();
     }, 300);
-    
+
 }
 
 function offset(el) {
@@ -70,64 +70,111 @@ function offset(el) {
 
 // Navigation
 
-window.onload = function() {
+window.onload = function () {
     var navToggleButton = $('.nav-toggle');
     var navToggleSvg = $('#nav-toggle');
-	var navList = $('.nav-aside');
-	var navListOpen = 'nav-aside--open';
-	var navLink = $('.nav__link');
-	var mobile = $('.contacts');
-	var menuFixed = 'contacts--mob-fixed';
+    var navList = $('.nav-aside');
+    var navListOpen = 'nav-aside--open';
+    var navLink = $('.nav__link');
+    var mobile = $('.contacts');
+    var menuFixed = 'contacts--mob-fixed';
     var logoSvg = $('.logo-svg .logo-text');
-	
-	navToggleButton.on('click', function(e) {
-		e.preventDefault();
-		navList.toggleClass(navListOpen);
-		mobile.toggleClass(menuFixed);
+
+    navToggleButton.on('click', function (e) {
+        e.preventDefault();
+        navList.toggleClass(navListOpen);
+        mobile.toggleClass(menuFixed);
         logoSvg.toggleClass('logo-text--dark');
 
-		navButtonToggle();
-	});
+        navButtonToggle();
+    });
 
-	navLink.on('click', function() {
+    navLink.on('click', function () {
 
-		if(navToggleSvg.hasClass("active"))  {
-	      navButtonToggle();
-	    } 
-	   
-		navList.removeClass(navListOpen);
-		mobile.removeClass(menuFixed);
+        if (navToggleSvg.hasClass("active")) {
+            navButtonToggle();
+        }
+
+        navList.removeClass(navListOpen);
+        mobile.removeClass(menuFixed);
         logoSvg.removeClass('logo-text--dark');
 
-	});
+    });
 
-	function navButtonToggle() {
-		if(navToggleSvg.hasClass("active"))  {
-	      navToggleSvg.removeClass("active");
-	    } else {
-	      navToggleSvg.addClass("active");
-	    }
-	};
+    function navButtonToggle() {
+        if (navToggleSvg.hasClass("active")) {
+            navToggleSvg.removeClass("active");
+        } else {
+            navToggleSvg.addClass("active");
+        }
+    };
 
 
     // Slider
     $('.header__slider').slick({
-        lazyLoad: 'progressive',
+        lazyLoad: 'ondemand',
         arrows: false,
         dots: false,
         autoplay: true,
         speed: 2000,
-        easing: 'ease-in'       
+        easing: 'ease-in'
     });
 
-    
+    $('.comments__slider').slick({
+        lazyLoad: 'progressive',
+        arrows: true,
+        dots: false,
+        autoplay: true,
+        speed: 1000,
+        easing: 'ease-in',
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        centerMode: true,
+        centerPadding: '40px',
+
+        responsive: [
+            {
+                breakpoint: 1700,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 1070,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: "unslick"
+            }
+        ]
+    });
 
     $('.sertificates__wrapper').magnificPopup({
         delegate: '.aspect-ratio-box-inside', // child items selector, by clicking on it popup will open
         type: 'image'
         // other options
-      });
+    });
 };
 
 
-  
