@@ -48,3 +48,22 @@ mixin commentCard(text, name, date)
             | #{name}
         .comment-card__date
             | #{date}
+
+mixin cardSpecialist(img, name, text, price)
+    .specialist-card
+        .specialist-card__photo
+            .aspect-ratio-box 
+                img(src="../img/portraits/"+ img, alt=""+img width='332' height="412" class="aspect-ratio-box-inside" loading="lazy")
+        .specialist-card__description
+            .specialist-card__name.specialist-card__name--dark
+                | #{name}
+            .specialist-card__position.specialist-card__position--dark
+                | #{text}
+            .specialist-card__price.specialist-card__price--margin
+                p Цена:
+                p #{price}
+            .btn__wrapper
+                button(class="btn btn--dark btn--mt20 btn--size-narrow" type="button")
+                    | ЗАПИСЬ
+                button(class="btn btn--light btn--size-narrow" type="button")
+                    | консультация
