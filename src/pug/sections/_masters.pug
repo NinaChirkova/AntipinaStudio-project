@@ -7,21 +7,5 @@ h2(class="title title--bottom-line title--margin")
 //-     +cardMasters("master1.jpg", "master-portrait-1.jpg", "Ксения Антипина", "Ксения Антипина", "Руководитель, мастер")
 
 section(class="specialist__wrapper" id="masters")
-    .specialist-card
-        .specialist-card__photo
-            .aspect-ratio-box 
-                img(src="../img/portraits/Ksenya-master.jpg", alt="owner-portrait" width='332' height="412" class="aspect-ratio-box-inside" loading="lazy")
-        .specialist-card__description
-            .specialist-card__name.specialist-card__name--dark
-                | Ксения Антипина
-            .specialist-card__position.specialist-card__position--dark
-                | Чемпион 2018 года по татуажу #[br]Мастер, коуч, хозяйка студии
-            .specialist-card__price.specialist-card__price--margin
-                p Цена:
-                p от 6 000
-            .btn__wrapper
-                button(class="btn btn--dark btn--mt20 btn--size-narrow" type="button")
-                    | ЗАПИСЬ
-                button(class="btn btn--light btn--size-narrow" type="button")
-                    | консультация
+    +cardSpecialist("Ksenya-master.jpg", "Ксения Антипина", "Чемпион 2018 года по татуажу Мастер, коуч, хозяйка студии", "от 6 000 ₽")
     +cardSpecialist("Nataly-master.jpg", "Мастер Наталья", "Чемпион 2018 года по татуажу Мастер, коуч, хозяйка студии", "от 4 000 ₽")
