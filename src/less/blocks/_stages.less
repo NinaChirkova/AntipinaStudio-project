@@ -3,9 +3,10 @@
     flex-direction: column;
     align-items: center;
     counter-reset: section;
+    padding-left: 20px;
 
     &__item {
-        width: 30%;
+        width: 90%;
         position: relative;
         padding-bottom: 30px;
         
@@ -18,13 +19,13 @@
             top: 0;
             font-family: 'Circe-Bold';
             font-weight: 700;
-            font-size: 42px;
+            font-size: 36px;
             line-height: 1;
         }
 
         &:nth-child(odd) {
-            transform: translateX(calc(50% - 2px));
-            padding-left: 90px;
+            // transform: translateX(calc(50% - 2px));
+            padding-left: 70px;
             text-align: left;
             border-left: 2px solid #000;
 
@@ -41,20 +42,20 @@
             }
 
             &:after {
-                left: 60px;
+                left: 40px;
             }
         }
 
         &:nth-child(even) {
-            padding-right: 90px;
-            transform: translateX(-50%);
-            text-align: right;
-            border-right: 2px solid #000;
+            padding-left: 70px;
+            // transform: translateX(-50%);
+            text-align: left;
+            border-left: 2px solid #000;
 
             &:before {
                 content: "";
                 position: absolute;
-                right: -15px;
+                left: -15px;
                 top: 0;
                 width: 24px;
                 height: 24px;
@@ -64,13 +65,156 @@
             }
 
             &:after {
-                right: 60px;
+                left: 40px;
             }
             
         }
 
         &:last-child {
             border-color: #fff;
+        }
+    }
+
+    @media(min-width: 576px) {
+        padding-left: 0;
+        &__item {
+            &:after {
+                font-size: 42px;
+            }
+            &:nth-child(odd),
+            &:nth-child(even) {
+                padding-left: 90px;
+
+                &:after {
+                    left: 60px;
+                }
+
+            }  
+        }
+    }
+
+    @media(min-width: 768px) {
+        &__item {
+            width: 48%;
+    
+            &:nth-child(odd) {
+                transform: translateX(calc(50% - 2px));
+                text-align: left;
+                border-left: 2px solid #000;
+    
+                &:before {
+                    left: -15px;
+                }
+    
+                &:after {
+                    left: 60px;
+                }
+            }
+    
+            &:nth-child(even) {
+                padding-left: 0;
+                padding-right: 90px;
+                transform: translateX(-50%);
+                text-align: right;
+                border-right: 2px solid #000;
+                border-left: none;
+    
+                &:before {
+                    right: -15px;
+                    left: auto;
+                }
+    
+                &:after {
+                    right: 60px;
+                    left: auto;
+                }
+                
+            }
+
+            &:last-child {
+                border-color: #fff;
+            }
+        }
+    }
+
+    @media(min-width: 992px) {
+        &__item {
+            width: 90%;
+    
+            &:nth-child(odd) {
+                transform: translateX(0);
+            }
+    
+            &:nth-child(even) {
+                padding-left: 90px;
+                transform: translateX(0);
+                text-align: left;
+                border-left: 2px solid #000;
+                border-right: none;
+    
+                &:before {
+                    left: -15px;
+                }
+    
+                &:after {
+                    left: 60px;
+                }
+                
+            }
+
+            &:last-child {
+                border-color: #fff;
+            }
+        }
+    }
+
+    @media(min-width: 1200px) {
+        &__item {
+            width: 48%;
+    
+            &:nth-child(odd) {
+                transform: translateX(calc(50% - 2px));
+                text-align: left;
+                border-left: 2px solid #000;
+    
+                &:before {
+                    left: -15px;
+                }
+    
+                &:after {
+                    left: 60px;
+                }
+            }
+    
+            &:nth-child(even) {
+                padding-left: 0;
+                padding-right: 90px;
+                transform: translateX(-50%);
+                text-align: right;
+                border-right: 2px solid #000;
+                border-left: none;
+    
+                &:before {
+                    right: -15px;
+                    left: auto;
+                }
+    
+                &:after {
+                    right: 60px;
+                    left: auto;
+                }
+                
+            }
+
+            &:last-child {
+                border-color: #fff;
+            }
+        }
+    }
+
+    @media(min-width: 1500px) {
+        &__item {
+            width: 30%;
         }
     }
 }
