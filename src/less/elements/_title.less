@@ -1,11 +1,13 @@
 .title {
     font-family: 'Circe-Bold';
     font-weight: 700;
-    font-size: 52px;
+    font-size: 44px;
     line-height: 1.49;
     color: #000000;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
 
     &--d-none-lg {
 
@@ -59,7 +61,13 @@
         margin-bottom: 100px;
     }
 
+    @media(min-width: 768px) {
+        font-size: 48px;
+    }
+
     @media(min-width: 992px) {
+        font-size: 52px;
+
         &--d-none {
             display: none;
         }

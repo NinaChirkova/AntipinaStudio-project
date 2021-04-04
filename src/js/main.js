@@ -182,6 +182,24 @@ window.onload = function () {
 	$(".nav-helper a,a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
 		highlightSelector:".nav-helper a"
 	});
+
+    // Раскрывающийся список
+
+    let btnQuestion = document.querySelectorAll('.collapsible');
+
+    for(let i = 0; i < btnQuestion.length; i++) {
+        btnQuestion[i].addEventListener('click', function() {
+            this.classList.toggle('_active');
+
+            let content = this.nextElementSibling;
+
+            if(content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.style.borderBottom = 'none';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.borderBottom = '1px solid rgba(0, 0, 0, 1)';
+            }
+        })
+    }
 };
-
-

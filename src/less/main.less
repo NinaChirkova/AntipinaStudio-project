@@ -11,6 +11,7 @@
 @import "../less/sections/_insta.less";
 @import "../less/sections/_address.less";
 @import "../less/sections/_nav-helper.less";
+@import "../less/sections/_questions.less";
 
 // Blocks
 @import "../less/blocks/_nav.less";
@@ -152,17 +153,13 @@ h1, h2, h3, h4, p {
     }
 
     &--margin {
-        margin-top: 200px;
+        margin-top: 110px;
     }
 
     @media(min-width: 576px) {
         &--grey {
             padding: 50px 80px;
         }
-
-        // &__item {
-        //     width: 95%;
-        // }
     }
 
     @media(min-width: 768px) {
@@ -177,6 +174,10 @@ h1, h2, h3, h4, p {
                 margin-top: 0;
             }
         }
+
+        &--margin {
+            margin-top: 160px;
+        }
     }
 
     @media(min-width: 992px) {
@@ -186,6 +187,10 @@ h1, h2, h3, h4, p {
 
         &__item {
             width: 46%;
+        }
+
+        &--margin {
+            margin-top: 200px;
         }
     }
 
