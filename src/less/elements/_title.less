@@ -1,7 +1,7 @@
 .title {
     font-family: 'Circe-Bold';
     font-weight: 700;
-    font-size: 35px;
+    font-size: 52px;
     line-height: 1.49;
     color: #000000;
     margin-left: auto;
@@ -123,12 +123,17 @@
 .subtitle {
     font-family: 'Circe-Bold';
     font-size: 35px;
-    line-height: 52px;
+    line-height: 1.5;
     color: #000000;
 
     &--small {
         font-size: 25px;
-    line-height: 1.2;
+        line-height: 1.2;
+    }
+
+    &--changed {
+        font-size: 30px;
+        line-height: 1.3;
     }
 }
 
@@ -145,6 +150,13 @@
 
     .title--header-service {
         font-size: 57px;
+    }
+}
+
+@media(min-width: 768px) {
+    .subtitle--changed {
+        font-size: 35px;
+        line-height: 1.5;
     }
 }
 

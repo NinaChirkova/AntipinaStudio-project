@@ -1,6 +1,5 @@
 .text {
-    font-family: 'Circe-Regular';
-    
+    font-family: 'Circe-Regular';    
 
     &--standart {
         font-size: 16px;
@@ -27,6 +26,19 @@
             width: 32px;
             height: 1.5px;
             background: @color-standart;
+        }
+    }
+
+    &--huge {
+        font-family: 'Circe-Bold';
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 1.5;
+    }
+
+    @media(min-width: 1200px) {
+        &--huge {
+            font-size: 72px;
         }
     }
 

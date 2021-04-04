@@ -1,0 +1,45 @@
+.list {    
+    list-style-type: none;
+    padding-left: 0;
+
+    &--service-descr {
+        padding-left: 30px;
+        font-family: 'Circe-Light';
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 2.16;
+
+        .list__item {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -30px;
+                width: 14px;
+                height: 100%;
+                background: url(../img/icons/check.svg) no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+
+    @media(min-width: 576px) {
+        &--service-descr {
+            font-size: 22px;
+        }
+
+        .list__item {
+
+            &:before {
+                width: 16px;
+            }
+        }
+    }
+
+    @media(min-width: 1700px) {
+        &--service-descr {
+            font-size: 24px;
+        }
+    }
+}

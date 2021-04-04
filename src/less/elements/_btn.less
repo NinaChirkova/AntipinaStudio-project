@@ -16,14 +16,11 @@
     flex-direction: column;
     width: 100%;
 
-    &--row {
+    &--row,
+    &--insta {
         flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
-
-        // button:first-child {
-        //     margin-right: 20px;
-        // }
     }
 
     &--margin {
@@ -73,6 +70,14 @@
 
     @media(min-width: 992px) {
         width: auto;
+
+        &--insta {
+            flex-direction: row;
+
+            button:first-child {
+                margin-right: 20px;
+            }
+        }
     }
 
     @media(min-width: 1400px) {
