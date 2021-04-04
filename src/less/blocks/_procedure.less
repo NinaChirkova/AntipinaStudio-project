@@ -1,0 +1,39 @@
+.procedure-description {
+    display: flex;
+    flex-wrap: wrap;
+
+    p:first-child {
+        margin-right: 30px;
+    }
+
+    &__price,
+    &__duration {  
+        font-family: 'Circe-Light';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.5;  
+
+        span {
+            font-family: 'Circe-Regular';
+            font-weight: 400;
+            font-size: 20px;
+            padding-left: 15px;
+        }
+    }
+
+    &--light {
+        color: #ffffff;
+    }
+
+    @media(min-width: 1200px) {
+        &__price,
+        &__duration {
+            font-size: 16px; 
+    
+            span {
+                font-size: 24px;
+            }
+        }
+    }
+
+}

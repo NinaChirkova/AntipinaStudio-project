@@ -13,7 +13,8 @@
     }
 }
 
-.header__slider {
+.header__slider,
+.header__img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -25,9 +26,38 @@
         height: 100%;
     }
 }
+.header__img {   
+    .img-stopper {
+        object-position: 65% 0;
+    } 
+
+    @media(min-width: 1200px) {
+        .img-stopper {
+            object-position: 60% 0;
+        }
+    }
+
+    @media(min-width: 1400px) {
+        .img-stopper {
+            object-position: center right;
+        }
+    }
+}
 
 .header__title {
     position: relative;
     height: max-content;
     z-index: 1;
+}
+
+.header__title--width {
+    width: 100%;
+
+    @media(min-width: 450px) {
+        width: 80%;
+    }
+
+    @media(min-width: 1050px) {
+        width: 50%;
+    }
 }
