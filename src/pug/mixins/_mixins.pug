@@ -52,6 +52,7 @@ mixin commentCard(text, name, date)
 mixin listService(text)
     li.list__item.list__item--img-left
         | #{text}
+
 mixin cardSpecialist(img, name, text, price)
     .specialist-card
         .specialist-card__photo
@@ -69,4 +70,26 @@ mixin cardSpecialist(img, name, text, price)
                 button(class="btn btn--dark btn--mt20 btn--size-form" type="button")
                     | ЗАПИСЬ
                 button(class="btn btn--light btn--size-form" type="button")
+                    | консультация
+
+mixin serviceCard(img, title, text, price, duration)
+    .card-service.card-service--margin
+        .card-service__photo
+            img(src="../img/service-cards/"+ img, alt=""+ title width="490" height="412" loading="lazy")
+        .card-service__description.card-service__description--pad.card-service__description--bg
+            h3.subtitle
+                | #{title}
+            p.text.text--standart.mt-15
+                | #{text}
+            .procedure-description.mt-30
+                p.procedure-description__price
+                    | Цена:
+                    span #{price}
+                p.procedure-description__duration
+                    | Время процедуры: 
+                    span #{duration}
+            .btn__wrapper.btn__wrapper--insta.btn__wrapper--margin-bigger
+                button(class="btn btn--light btn--size-header btn--mt20" type="button")
+                    | ЗАПИСЬ
+                button(class="btn btn--dark btn--size-header" type="button")
                     | консультация

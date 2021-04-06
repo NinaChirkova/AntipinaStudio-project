@@ -1,0 +1,120 @@
+.card-service {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:first-child) {
+        margin-top: 60px;
+    }
+
+    &--margin {
+        margin-top: 80px;
+    }
+    
+    &__photo {
+        width: 100%;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+
+    &__description {
+        width: 100%;
+        z-index: 0;
+
+        &--bg {
+            background: #F9F9F9;
+        }
+
+        &--pad {
+            padding: 45px 30px 35px 35px;
+        }
+    }
+
+    @media(min-width: 576px) {
+        align-items: flex-end;
+
+        &__photo {
+            width: 50%;
+        }
+
+        &__description {
+            transform: translateY(-8%);
+        }
+    }
+
+
+
+    @media(min-width: 768px) {
+
+        &--margin {
+            margin-top: 0;
+        }
+
+        &__photo {
+            width: 40%;
+        }
+
+        &__description {
+            transform: translateY(-15%);
+
+            &--pad {
+                padding: 55px 200px 55px 55px;
+            }
+        }
+    }
+
+    @media(min-width: 992px) {
+        &__description {
+
+            &--pad {
+                padding: 55px 120px 55px 55px;
+            }
+        }
+    }
+
+    @media(min-width: 1200px) {
+        &__description {
+
+            &--pad {
+                padding: 55px 220px 55px 55px;
+            }
+        }
+    }
+
+    @media(min-width: 1400px) {
+        flex-direction: row;
+        align-items: initial;
+
+        &__description {
+            width: 65%;
+            transform: translateY(0);
+
+            &--pad {
+                padding: 55px 60px 55px 55px;
+            }
+        }
+    }
+
+    @media(min-width: 1600px) {
+        &__description {
+    
+            &--pad {
+                padding: 55px 210px 55px 55px;
+            }
+        }
+    }
+
+    @media(min-width: 1800px) {
+        &__description {
+    
+            &--pad {
+                padding: 55px 305px 55px 55px;
+            }
+        }
+    }
+}
