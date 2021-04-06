@@ -2,10 +2,6 @@
     display: flex;
     flex-wrap: wrap;
 
-    &__description {
-
-    }
-
     &__photo {
         height: auto;
     }
@@ -13,7 +9,9 @@
     &__description {
         // min-width: 700px;
         background: #F9F9F9;
-        padding: 25px 15px 64px 15px;        
+        padding: 25px 15px 64px 15px; 
+        height: fit-content;
+        text-align: left;
 
         &>.text:not(:first-of-type) {
             margin-top: 35px;
@@ -21,6 +19,10 @@
 
         &>.text:nth-of-type(2) {
             margin-top: 55px;
+        }
+
+        &--pad {
+            padding: 45px 35px 60px 35px;
         }
     }
 
@@ -33,7 +35,11 @@
         
         &__description {
             max-width: 80%;
-            padding: 64px 45px 64px 50px; 
+            padding: 64px 45px 64px 50px;
+
+            &--pad {
+                padding: 65px 45px 60px 50px;
+            }
         }
         &__photo {
             max-width: 80%;
@@ -45,6 +51,10 @@
         &__description {
             max-width: 85%;
             transform: translate(15%, -60px);
+
+            &--pad {
+                padding: 65px 125px 60px 50px;
+            }
         }
         &__photo {
             max-width: 70%;
@@ -54,6 +64,16 @@
             margin-top: 210px;
             margin-bottom: 100px;
         }
+    }
+
+    @media(min-width: 992px) {
+        &__description {
+
+            &--pad {
+                padding: 65px 85px 60px 50px;
+            }
+        }
+
     }
 
     @media(min-width: 1200px) {
@@ -71,6 +91,16 @@
         }
     }
 
+    @media(min-width: 1300px) {
+        &__description {
+
+            &--pad {
+                padding: 80px 150px 60px 50px;
+            }
+        }
+
+    }
+
     @media(min-width: 1540px) {
         flex-wrap: nowrap;
 
@@ -84,7 +114,12 @@
 
         &__description {
             padding: 64px 85px 64px 50px;
+
+            &--pad {
+                padding: 80px 150px 60px 50px;
+            }
         }
+
     }
 
     @media(min-width: 1740px) {

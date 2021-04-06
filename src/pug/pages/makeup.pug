@@ -1,0 +1,32 @@
+extends ../layouts/main.pug
+
+block variables 
+    -var title = "Макияж глаз";
+    -
+        menuAsideItems = [
+            {"name": "Брови", "url" : "#"},
+            {"name": "Глаза", "url" : "#"},
+            {"name": "Губы", "url" : "#"},
+            {"name": "Удаление татуажа", "url" : "#"},
+            {"name": "Татуировки", "url" : "#"},
+            {"name": "Пирсинг", "url" : "#"}
+        ];
+
+block content
+    .content-container.d-flex.flex-no-wrap
+        include ../sections/_nav-aside.pug
+
+        main.content-container__main
+            header.header
+                .header__img 
+                    img(src="../img/big-size/makeup.jpg", alt="" class="img img-stopper")
+
+                include ../sections/_contacts.pug
+
+                .header__title.header__title--width
+                    h2.title--header-service.anim-item._anim-no-hide
+                        | Перманентный #[br]макияж глаз в #[br]Иванове
+                    p.title__description.anim-item._anim-no-hide
+                        | Покоряйте одним взглядом
+            
+            include ../sections/makeup/_about.pug

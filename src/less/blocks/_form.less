@@ -1,4 +1,5 @@
-.form-consultation {
+.form-consultation,
+.block-about__description {
     text-align: center;
 
     &--size {
@@ -7,9 +8,13 @@
         margin-right: auto;
     }
 
+    &--align {
+        text-align: left;
+    }
+
     &--margin {
         margin-top: 110px;
-    }
+    }    
 
     form {
         margin-top: 45px;
@@ -20,7 +25,7 @@
             background: #F9F9F9;
             border: 0.5px solid rgba(0, 0, 0, 0.2);
             padding: 15px;
-            text-align-last: center;
+            text-align: center;            
             margin-bottom: 20px;
             transition: border 0.3s linear;
 
@@ -36,6 +41,7 @@
             position: relative;
             color: rgba(0, 0, 0, 0.6);
             appearance: none;
+            text-align-last: center;
 
             &:after {
                 content: "";
@@ -56,6 +62,16 @@
         }
     }
 
+    &--form-changed {
+
+        form input,
+        form select {
+            background: #fff;
+            text-align: left;
+            text-align-last: left;
+        }
+    }
+
     @media(min-width: 576px) {
         &--size {
             width: 500px;
@@ -73,4 +89,8 @@
             margin-top: 290px;
         }
     }
+}
+
+.select-wrapper {
+
 }
