@@ -1,0 +1,67 @@
+extends ../layouts/main.pug
+
+block variables 
+    -var title = "Услуги";
+    -
+        menuAsideItems = [
+            {"name": "Брови", "url" : "#"},
+            {"name": "Глаза", "url" : "#"},
+            {"name": "Губы", "url" : "#"},
+            {"name": "Удаление татуажа", "url" : "#"},
+            {"name": "Татуировки", "url" : "#"},
+            {"name": "Пирсинг", "url" : "#"}
+        ];
+
+block content 
+
+    .content-container.d-flex.flex-no-wrap
+        include ../sections/_nav-aside.pug
+
+        main.content-container__main
+            header.header
+                .header__img 
+                    img(src="../img/big-size/tatoo-eyelash-bg.jpg", alt="" class="img img-stopper")
+
+                include ../sections/_contacts.pug
+
+                .header__title.header__title--width
+                    h2.title--header-service.anim-item._anim-no-hide
+                        | Татуаж #[br]межресничного #[br]пространства
+                    .procedure-description.procedure-description--light
+                        p.procedure-description__price
+                            | Цена:
+                            span 4 000 — 6 000 ₽
+                        p.procedure-description__duration
+                            | Время процедуры: 
+                            span ~ 1,5 часа
+                    .btn__wrapper.btn__wrapper--row.btn__wrapper--margin
+                        button(class="btn btn--light btn--size-header btn--mt20" type="button")
+                            | ЗАПИСЬ
+                        button(class="btn btn--dark btn--size-header" type="button")
+                            | бесплатная консультация
+            include ../sections/tatoo-eyelash/_about.pug
+            include ../sections/service/_insta.pug
+
+            section.section-duration
+                .section-duration__wrapper.section-duration__wrapper--flex.section-duration__wrapper--margin
+                    p.section-duration__text 
+                        span 3-5 
+                        span лет
+                        span сохраняется эффект #[br]межресничного татуажа
+                    .section-duration__img
+                        img(src="../img/service-cards/tatoo-round.png", alt="tatoo-round" width="627" height="627")
+                    p.section-duration__text 
+                        span 1 месяц 
+                        span через
+                        span требуется обязательная #[br]коррекция татуажа
+                    
+            
+            include ../sections/service/_stages.pug
+            include ../sections/service/_masters.pug
+            include ../sections/_comments.pug
+            include ../sections/service/_answers.pug
+            include ../sections/service/_form.pug
+
+            include ../sections/_footer.pug
+
+    include ../sections/_svg.pug
