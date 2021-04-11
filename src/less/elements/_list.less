@@ -2,6 +2,12 @@
     list-style-type: none;
     padding-left: 0;
 
+
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     &--service-descr {
         padding-left: 30px;
         font-family: 'Circe-Light';
@@ -24,7 +30,57 @@
         }
     }
 
+    &--materials-descr {
+        padding-left: 30px;
+        font-family: 'Circe-Regular';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 2;
+
+        .list__item {
+            position: relative;
+
+            &--flex-item {
+                width: 100%;
+            }            
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -30px;
+                width: 14px;
+                height: 100%;
+            }
+
+            &--check {
+
+                &:before {
+                    background: url(../img/icons/check.svg) no-repeat center;
+                    background-size: contain;
+                }
+            }
+            &--cross {
+
+                &:before {
+                    background: url(../img/icons/cross.svg) no-repeat center;
+                    background-size: contain;
+                }
+            }
+
+            @media(min-width: 576px) {
+                &--flex-item {
+                    width: 50%;
+                }    
+            }
+        }
+    }
+
     @media(min-width: 576px) {
+
+        &--height {
+            height: 4em;
+        }
+
         &--service-descr {
             font-size: 22px;
         }
