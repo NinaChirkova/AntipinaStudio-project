@@ -27,6 +27,7 @@
 @import "../less/blocks/_specialists.less";
 @import "../less/blocks/_card-service.less";
 @import "../less/blocks/_block.less";
+@import "../less/blocks/_card.less";
 
 // Elements
 @import "../less/elements/_svg.less";
@@ -344,5 +345,63 @@ h1, h2, h3, h4, p {
 
     @media(min-width: 1200px) {
         display: block;
+    }
+}
+
+.section {
+
+    &--margin {
+        margin-top: 130px;
+    }
+
+    &--pad {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    @media(min-width: 768px) {
+        
+    }
+
+    @media(min-width: 992px) {
+        &--pad {
+            padding-left: 0;
+        }
+    }
+
+    @media(min-width: 1200px) {
+        &--margin {
+            margin-top: 230px;
+        }
+    }
+
+    @media(min-width: 1500px) {
+        &--pad {
+            padding-right: 0;
+        }
+    }
+}
+
+.section__wrapper {
+
+    &--margin {
+        margin-top: 60px;
+    }
+
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    @media(min-width: 1200px) {
+        &--margin {
+            margin-top: 90px;
+        }
+    }
+
+    @media(min-width: 1500px) {
+        justify-content: flex-start;
+
     }
 }

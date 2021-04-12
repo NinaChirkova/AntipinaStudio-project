@@ -95,7 +95,7 @@
     position: relative;
     font-family: 'Circe-Bold';
     font-size: 42px;
-    line-height: 42px;
+    line-height: 1;
     color: #FFFFFF;
     margin-bottom: 0.6em;
     z-index: 1;
@@ -103,10 +103,12 @@
     transform: translateY(120%);
     opacity: 0;
     transition: all 0.8s ease;
+
+
 }
 
 .title--header-service {
-    line-height: 0.8;
+    line-height: 1;
 }
 
 .title--header._active,
@@ -193,6 +195,10 @@
     }
     .subtitle--small {
         font-size: 25px;
+    }
+
+    .title--header-service {
+        line-height: 1.2;
     }
 }
 

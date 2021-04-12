@@ -1,0 +1,68 @@
+extends ../layouts/main.pug
+
+block variables 
+    -var title = "Волосковый татуаж бровей";
+    -
+        menuAsideItems = [
+            {"name": "Брови", "url" : "#"},
+            {"name": "Глаза", "url" : "#"},
+            {"name": "Губы", "url" : "#"},
+            {"name": "Удаление татуажа", "url" : "#"},
+            {"name": "Татуировки", "url" : "#"},
+            {"name": "Пирсинг", "url" : "#"}
+        ];
+
+block content 
+
+    .content-container.d-flex.flex-no-wrap
+        include ../sections/_nav-aside.pug
+
+        main.content-container__main
+            header.header
+                .header__img 
+                    img(src="../img/big-size/hair-tatoo-bg.jpg", alt="" class="img img-stopper")
+
+                include ../sections/_contacts.pug
+
+                .header__title.header__title--width
+                    h2.title--header-service.anim-item._anim-no-hide
+                        | Волосковый #[br]татуаж бровей
+                    p.title__description.anim-item._anim-no-hide
+                        | Улучшим форму и густоту бровей, не лишая их естественного вида
+                    .procedure-description.procedure-description--light.mt-45
+                        p.procedure-description__price
+                            | Цена:
+                            span от 6 000  ₽
+                        p.procedure-description__duration
+                            | Время процедуры: 
+                            span ~ 2 часа
+                    .btn__wrapper.btn__wrapper--row.btn__wrapper--margin
+                        button(class="btn btn--light btn--size-header btn--mt20" type="button")
+                            | ЗАПИСЬ
+                        button(class="btn btn--dark btn--size-header" type="button")
+                            | бесплатная консультация
+            include ../sections/brows/hair/_about.pug
+            include ../sections/brows/hair/_tatoo-help.pug
+            include ../sections/service/_insta.pug
+            section.section-duration.section-duration--grey.section-duration--margin
+                .section-duration__item
+                    p.text--huge 
+                        | до 2 лет
+                    p.text.text--standart 
+                        | сохраняется эффект межресничного татуажа 
+                .section-duration__item
+                    p.text--huge 
+                        | 1 месяц
+                    p.text.text--standart 
+                        | Через 1 месяц требуется обязательная коррекция
+                    
+            
+            include ../sections/brows/blending/_stages.pug
+            include ../sections/service/_masters.pug
+            include ../sections/_comments.pug
+            include ../sections/brows/blending/_answers.pug
+            include ../sections/brows/hair/_form.pug
+
+            include ../sections/_footer.pug
+
+    include ../sections/_svg.pug

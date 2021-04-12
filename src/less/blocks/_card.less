@@ -1,0 +1,144 @@
+.card {
+
+    &--width {
+        width: 100%;
+    }
+
+    &--margin {
+        &:nth-child(n+2) {
+            margin-top: 50px;
+        }
+    }
+
+    @media(min-width: 440px) {
+        &--width {
+            width: 70%;
+        }
+    }
+
+    @media(min-width: 576px) {
+        &--width {
+            width: 43%;
+        }
+    
+        &--margin {
+
+            &:nth-child(n+2) {
+                margin-top: 0;
+            }
+
+            &:nth-child(n+3) {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @media(min-width: 768px) {
+        &--width {
+            width: 30%;
+        }
+    
+        &--margin {
+
+            &:nth-child(n+3) {
+                margin-top: 0;
+            }
+
+            &:nth-child(n+4) {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @media(min-width: 992px) {
+        &--width {
+            width: 46%;
+        }
+
+        &--margin {
+
+            &:nth-child(n+4) {
+                margin-top: 0;
+            }
+            &:nth-child(n+3) {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @media(min-width: 1200px) {
+        &--width {
+            width: 30%;
+        }
+
+        &--margin {
+
+            &:nth-child(n+3) {
+                margin-top: 0;
+            }
+
+            &:nth-child(n+4) {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @media(min-width: 1300px) {
+        &--width {
+            width: 26%;
+        }    
+    }
+
+    @media(min-width: 1500px) {
+        &--width {
+            width: 19%;
+        }
+
+        &--margin {
+
+            &:nth-child(n+4) {
+                margin-top: 0;
+            }
+
+            &:not(:last-child) {
+                margin-right: 80px;
+            }
+        }
+    }
+
+    @media(min-width: 1700px) {
+        &--width {
+            width: 17%;
+        }
+    }
+}
+
+.card__title {
+    font-family: 'Circe-Bold';
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1;
+
+    &--margin {
+        margin-top: 20px;
+    }
+}
+
+.card__text {
+
+    &--margin {
+        margin-top: 10px;
+    }
+}
+
+.card__img {
+    height: 60px;
+
+    img {
+        height: 100%;
+    }
+
+    @media(min-width: 768px) {
+        height: 70px;
+    }
+}
