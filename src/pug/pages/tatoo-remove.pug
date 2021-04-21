@@ -1,0 +1,42 @@
+extends ../layouts/main.pug
+
+block variables 
+    -var title = "Удаление татуажа";
+    -
+        menuAsideItems = [
+            {"name": "Брови", "url" : "#"},
+            {"name": "Глаза", "url" : "#"},
+            {"name": "Губы", "url" : "#"},
+            {"name": "Удаление татуажа", "url" : "#"},
+            {"name": "Татуировки", "url" : "#"},
+            {"name": "Пирсинг", "url" : "#"}
+        ];
+
+block content
+    .content-container.d-flex.flex-no-wrap
+        include ../sections/_nav-aside.pug
+
+        main.content-container__main
+            header.header
+                .header__img 
+                    img(src="../img/big-size/makeup.jpg", alt="" class="img img-stopper--changed")
+
+                include ../sections/_contacts.pug
+
+                .header__title
+                    h2.title--header.anim-item._anim-no-hide
+                        | Удаление татуажа #[br]в Иванове
+                    p.title__description.anim-item._anim-no-hide
+                        | Бесследно избавим от ненужных татуировок, #[br(class="br-d-none-mobile")]старого или некачественного перманентного #[br(class="br-d-none-mobile")]макияжа
+            
+            include ../sections/makeup/_about.pug
+            include ../sections/makeup/_services.pug
+            include ../sections/makeup/_video-section.pug
+            include ../sections/makeup/_materials-section.pug
+            include ../sections/makeup/_advantages-section.pug
+            include ../sections/makeup/_procedures.pug
+
+            include ../sections/makeup/_form.pug
+            include ../sections/_footer.pug
+
+    include ../sections/_svg.pug
