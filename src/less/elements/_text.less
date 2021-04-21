@@ -13,6 +13,13 @@
         line-height: 1.2; 
     }
 
+    &--light {
+        font-family: 'Circe-Light';
+        font-weight: 300;
+        line-height: 1.5; 
+    }
+
+
     &--emphasize {
         font-size: 21px;
         line-height: 31px;
@@ -72,4 +79,69 @@
             line-height: 24px;
         }
     }
+}
+
+.text--box-position {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text--box-width {
+    width: 96%;
+}
+
+
+.text--align-changed {
+    text-align: center;
+}
+
+@media(min-width: 576px) {
+    .text--box-width {
+        width: 80%;
+    }
+}
+
+@media(min-width: 992px) {
+    .text--box-width {
+        width: 90%;
+    }
+
+    .text--box-position {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    .text--align-changed {
+        text-align: left;
+    }
+}
+
+@media(min-width: 1200px) {
+    .text--box-width {
+        width: 70%;
+    }
+
+    .text--box-position {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .text--align-changed {
+        text-align: center;
+    }
+    
+}
+
+@media(min-width: 1400px) {
+    .text--box-width {
+        width: 60%;
+    }
+    
+}
+
+@media(min-width: 1600px) {
+    .text--box-width {
+        width: 50%;
+    }
+    
 }
