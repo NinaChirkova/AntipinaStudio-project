@@ -1,10 +1,22 @@
 mixin cardService(img, alt, title)
-    .service-card
+    .service-card.service-card--width-third
         .aspect-ratio-box
             img(src="../img/service-cards/"+ img, alt=""+ alt width="390" height="351" class="service-card__bg")
             .aspect-ratio-box-inside
                 h3.service-card__title.service-card__title--light
                     | #{title}
+                button(class="btn btn--light btn--size btn--mt20 btn--size-small" type="button")
+                    | ЗАПИСЬ
+
+mixin cardServiceWide(img, alt, title1, title2)
+    .service-card.service-card--width-half
+        .aspect-ratio-box
+            img(src="../img/service-cards/"+ img, alt=""+ alt width="792" height="475" class="service-card__bg")
+            .aspect-ratio-box-inside
+                h3.service-card__title.service-card__title--light
+                    | #{title1}
+                    br(class="br-d-none-mobile")
+                    | #{title2}
                 button(class="btn btn--light btn--size btn--mt20 btn--size-small" type="button")
                     | ЗАПИСЬ
 

@@ -12,13 +12,33 @@
 
 .service-card {
     position: relative;
-    width: 50%;
+    // width: 50%;
     // transition: all 0.4s linear;
 
     button {
         opacity: 0;
         transition: opacity 0.4s linear;
-    }    
+    }
+
+    &--width-third {
+        width: 50%;
+
+        .aspect-ratio-box {
+            padding-top: 351px / 390px * 100%;
+        }
+    }
+
+    &--width-half {
+        width: 50%;
+
+        .aspect-ratio-box {
+            padding-top: 585px / 792px * 100%;
+        }
+
+        .service-card__bg {
+            object-position: 50% 15%;
+        }
+    }
 
     &__bg {
         position: absolute;
@@ -65,8 +85,7 @@
     }
 
     .aspect-ratio-box {
-        overflow: hidden;
-        padding-top: 351px / 390px * 100%;
+        overflow: hidden;        
         position: relative;
     }
     
@@ -113,7 +132,11 @@
     }
 
     @media(min-width: 992px) {
-        width: 45%;
+        // width: 45%;
+
+        &--width-third {
+            width: 45%;
+        }
 
         &__title {
             font-size: 24px;
@@ -121,8 +144,12 @@
     }
 
     @media(min-width: 1200px) {
-        width: 33.3333%;
+        // width: 33.3333%;
 
+        &--width-third {
+            width: 33.3333%;
+        }
+    
         &__title {
             font-size: 24px;
         }
