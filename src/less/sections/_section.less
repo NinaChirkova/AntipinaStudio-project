@@ -1,0 +1,37 @@
+.section {
+    
+    &--top-margin {
+        margin-top: 100px;
+    }
+
+    @media(min-width: 1300px) {
+        &--top-margin {
+            margin-top: 200px;
+        }
+    }
+}
+
+.section-inner {
+
+    &__wrapper {
+        
+        &--pad {
+            padding-bottom: 70px;
+        }
+    
+        &--line {
+            border-bottom: 1px solid #000000;
+        }
+
+        &--flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        @media(min-width: 1800px) {
+            &--width {
+                width: 80%;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.link {
+    position: relative;
+    color: #000000;
+
+    &::after {
+        content: "";
+        position: absolute;
+    }
+
+    &--arrow-size {
+
+        &.link::after {
+            width: 45px;
+            height: 100%;
+        }
+    }
+
+    &--arrow-right {
+        padding-right: 60px;
+
+        &.link::after {
+            background: url('../img/icons/arrow-link.svg') no-repeat;
+            background-size: contain;
+            background-position: 50%  50%;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &--margin {
+        margin-top: 45px;
+    }
+
+    @media(min-width: 768px) {
+        &--arrow-size {
+
+            &.link::after {
+                width: 65px;
+            }
+        }
+
+        &--arrow-right {
+            padding-right: 80px;
+        }
+    }
+}

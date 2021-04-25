@@ -19,7 +19,7 @@ block content
         main.content-container__main
             header.header
                 .header__img 
-                    img(src="../img/big-size/makeup.jpg", alt="" class="img img-stopper--changed")
+                    img(src="../img/big-size/tatoo-remove-bg.jpg", alt="" class="img img-stopper--changed")
 
                 include ../sections/_contacts.pug
 
@@ -27,14 +27,30 @@ block content
                     h2.title--header.anim-item._anim-no-hide
                         | Удаление татуажа #[br]в Иванове
                     p.title__description.anim-item._anim-no-hide
-                        | Бесследно избавим от ненужных татуировок, #[br(class="br-d-none-mobile")]старого или некачественного перманентного #[br(class="br-d-none-mobile")]макияжа
+                        | Бесследно избавим от ненужных татуировок, #[br(class="br-d-none-lg")]старого или некачественного перманентного #[br(class="br-d-none-lg")]макияжа
+                    .procedure-description.procedure-description--light.mt-45
+                        p.procedure-description__price
+                            | Цена:
+                            span от 1 700  ₽                    
+                        p.procedure-description__duration
+                            | Время процедуры: 
+                            span ~ 10 — 60 минут
+                    .btn__wrapper.btn__wrapper--row.btn__wrapper--margin
+                        button(class="btn btn--light btn--size-header btn--mt20" type="button")
+                            | ЗАПИСЬ
+                        button(class="btn btn--dark btn--size-header" type="button")
+                            | бесплатная консультация
             
-            include ../sections/makeup/_about.pug
-            include ../sections/makeup/_services.pug
-            include ../sections/makeup/_video-section.pug
-            include ../sections/makeup/_materials-section.pug
-            include ../sections/makeup/_advantages-section.pug
-            include ../sections/makeup/_procedures.pug
+            include ../sections/remove/_about.pug
+            include ../sections/remove/_advantages-section.pug
+            include ../sections/remove/_insta.pug
+            include ../sections/remove/_how-we-work.pug
+            include ../sections/remove/_pros_cons.pug
+            //- include ../sections/makeup/_services.pug
+            //- include ../sections/makeup/_video-section.pug
+            //- include ../sections/makeup/_materials-section.pug
+            //- include ../sections/makeup/_advantages-section.pug
+            //- include ../sections/makeup/_procedures.pug
 
             include ../sections/makeup/_form.pug
             include ../sections/_footer.pug

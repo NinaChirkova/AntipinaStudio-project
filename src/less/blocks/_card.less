@@ -8,7 +8,7 @@
         &:nth-child(n+2) {
             margin-top: 50px;
         }
-    }
+    }    
 
     @media(min-width: 440px) {
         &--width {
@@ -141,4 +141,176 @@
     @media(min-width: 768px) {
         height: 70px;
     }
+}
+
+.card-work {
+    &--width {
+        width: 100%;
+    }
+
+    &--flex {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &--pos-chess:nth-child(even) {
+        .card-work__img {
+            order: 1;
+        }
+
+        .card-work__text {
+            order: 2;
+
+            &--pad {
+                padding: 50px 30px 50px 30px;
+            }
+        }
+    }
+
+    &__img,
+    &__text {
+        &--size {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    }
+
+    &__text {
+        &--pad {
+            padding: 50px 30px 50px 30px;
+        }
+    }
+
+    &:last-child {
+        // padding-bottom: 70px;
+        border-bottom: 1px solid #000000;
+    }
+
+    @media(min-width: 576px) {
+        &__img,
+        &__text {
+            &--size {
+                width: 85%;
+            }
+        }
+
+        &__text {
+            &--pad {
+                padding: 50px 45px 50px 40px;
+            }
+        }
+
+        &--pos-chess:nth-child(even) {
+            .card-work__text {
+                &--pad {
+                    padding: 50px 45px 50px 40px;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 768px) {
+        &__img,
+        &__text {
+            &--size {
+                width: 70%;
+            }
+        }
+
+        &:last-child {
+            padding-bottom: 70px;
+        }
+    }
+
+    @media(min-width: 992px) {
+        &__img,
+        &__text {
+            &--size {
+                width: 100%;
+            }
+        }
+
+        &__text {
+            &--pad {
+                padding: 50px 45px 50px 0;
+            }
+        }
+
+        &--pos-chess:nth-child(even) {
+            .card-work__text {
+                &--pad {
+                    padding: 50px 45px 50px 0;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 1100px) {
+        &__img,
+        &__text {
+            &--size {
+                width: 80%;
+            }
+        }
+    }
+
+    @media(min-width: 1300px) {
+        &__img,
+        &__text {
+            &--size {
+                width: 50%;
+            }
+        }
+
+        &--pos-chess:nth-child(even) {
+            .card-work__img {
+                order: 2;
+            }
+    
+            .card-work__text {
+                order: 1;
+    
+                &--pad {
+                    padding: 50px 45px 50px 0;
+                }
+            }
+        }
+        &__text {
+            &--pad {
+                padding: 50px 45px 50px 50px;
+            }
+        }
+    }
+
+    @media(min-width: 1500px) {
+        &__text {
+            &--pad {
+                padding: 80px 70px 60px 60px;
+            }
+        }
+
+        &--pos-chess:nth-child(even) {
+            .card-work__text {
+                &--pad {
+                    padding: 90px 60px 60px 0;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 1800px) {
+        &--width {
+            width: 80%;
+        }
+    }
+
 }

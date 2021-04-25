@@ -105,3 +105,13 @@ mixin serviceCard(img, title, text, price, duration)
                     | ЗАПИСЬ
                 button(class="btn btn--dark btn--size-header" type="button")
                     | консультация
+
+mixin cardWork(img, title, text)
+    .card-work.card-work--pos-chess.card-work--width.card-work--flex
+        .card-work__img.card-work__img--size
+            img(src="../img/service-cards/"+ img, alt="Удаление тату" width="620" height="372")
+        .card-work__text.card-work__text--size.card-work__text--pad
+            h3.subtitle 
+                | #{title}
+            p.text.text--standart.mt-15
+                | #{text}
