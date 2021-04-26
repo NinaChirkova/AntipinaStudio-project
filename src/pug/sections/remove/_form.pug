@@ -1,0 +1,18 @@
+section.form-consultation.form-consultation--size.form-consultation--margin
+    h3.subtitle.subtitle--small
+        | Вернём вам естественную красоту и формы за одно посещение
+    p.text.text--standart.text--dark.mt-15
+        | За 1 час подберём для идеальную форму, цвет, технику. #[br]Сделаем эскиз макияжа. Расскажем о процедурах и уходе. 
+    form(action="POST")
+        input(type="text" name="clientName" id="clientName" placeholder="Ваше имя" class="text text--standart")
+        input(type="email" name="clientEmail" id="clientEmail" placeholder="Ваша электронная почта" class="text text--standart")
+        input(type="tel" name="clientPhone" id="clientPhone" placeholder="Ваш номер телефона" class="text text--standart")
+        select(name="timeToCall" class="text text--standart")
+            option(value="none" hidden="") Когда Вам лучше позвонить
+            option(value="09.00 - 10.00") 09.00 - 10.00
+            option(value="10.00 - 11.00") 10.00 - 11.00
+            option(value="11.00 - 12.00") 11.00 - 12.00
+            option(value="12.00 - 13.00") 12.00 - 13.00
+            option(value="13.00 - 14.00") 13.00 - 14.00
+        button(class="btn btn--dark btn--size-form" type="submit")
+            | позвоните мне
