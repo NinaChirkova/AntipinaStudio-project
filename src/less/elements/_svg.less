@@ -12,29 +12,47 @@
     }
 }
 
-.svg-eyelash__left {
-    display: none;
-}
-
-.svg-eyelash__right {
+.svg-eyelash__left,
+.svg-eye-arrow__left,
+.svg-eyelash__right,
+.svg-eye-arrow__right {
     display: none;
 }
 
 @media(min-width: 768px) {
-    .svg-eyelash__left {
+
+    .svg-eyelash__left,
+    .svg-eye-arrow__left,
+    .svg-eyelash__right,
+    .svg-eye-arrow__right {
         display: block;
         position: absolute;
+    }
+
+    .svg-eyelash__left {        
         transform: rotateY(180deg);
         width: 300px;
         top: 48px;
         left: 82px;
     }
+    .svg-eye-arrow__left {        
+        transform: rotateY(180deg);
+        width: 300px;
+        top: 65px;
+        left: 130px;
+        height: 110px;
+    }
 
     .svg-eyelash__right {
-        display: block;
-        position: absolute;
         top: 112px;
         right: -160px; 
+    }
+
+    .svg-eye-arrow__right {
+        top: 220px;
+        right: -76px;
+        height: 110px;
+        width: 300px;
     }
 }
 
@@ -47,10 +65,25 @@
         left: -220px;
     }
 
+    .svg-eye-arrow__left {
+        transform: rotateY(0deg);
+        width: 270px;
+        height: 157px;
+        top: 36px;
+        left: -123px;
+    }
+
     .svg-eyelash__right {
         height: 200px;
         top: 123px;
         right: -155px;
+    }
+
+    .svg-eye-arrow__right {
+        height: 133px;
+        top: 240px;
+        right: 28px;
+        width: 201px;
     }
 }
 
@@ -62,11 +95,25 @@
         left: -80px;
     }
 
+    .svg-eye-arrow__left {
+        height: 165px;
+        width: fit-content;
+        top: 111px;
+        left: -146px;
+    }
+
     .svg-eyelash__right {
         height: 134px;
         width: 173px;
         top: 188px;
         right: -32px;
+    }
+
+    .svg-eye-arrow__right {
+        height: 134px;
+        width: 360px;
+        top: 346px;
+        right: -15px;
     }
 }
 
@@ -78,9 +125,23 @@
         right: -52px;
     }
 
+    .svg-eye-arrow__right {
+        width: fit-content;
+        height: auto;
+        top: 420px;
+        right: 35px;
+    }
+
     .svg-eyelash__left {
         width: auto;
         top: 130px;
+        left: -140px;
+    }
+
+    .svg-eye-arrow__left {
+        width: fit-content;
+        height: auto;
+        top: 146px;
         left: -140px;
     }
 }

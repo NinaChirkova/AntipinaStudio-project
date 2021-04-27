@@ -41,19 +41,38 @@ block content
                             | бесплатная консультация
             include ../sections/tatoo-arrows/_about.pug
             include ../sections/service/_insta.pug
+            
+            section.section-duration.section-duration--margin
 
-            section.section-duration.section-duration--grey.section-duration--margin
-                .section-duration__item
-                    p.text--huge 
-                        | 3—5 лет
-                    p.text.text--standart 
-                        | сохраняется эффект межресничного татуажа 
-                .section-duration__item
-                    p.text--huge 
-                        | 1 месяц
-                    p.text.text--standart 
-                        | Через 1 месяц требуется обязательная коррекция
-                    
+                p.section-duration__text.section-duration__text--pos2 
+                    span 5
+                    span лет
+                    span сохраняется эффект#[br] межресничного татуажа
+
+                .section-duration__img.section-duration__img--position.section-duration__img--size
+                    img(src="./img/circle/tatoo-arrow.png", alt="" width="627" height="627" loading="lazy")
+                    svg(version="1.1" width="346" height="202" viewBox="0 0 346 202" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-eye-arrow__left" preserveAspectRatio="none")
+                        defs 
+                            marker( id="MarkerCircle"  refX="4" refY="4" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto")
+                                circle(cx="4" cy="4" r="4" fill="black")
+                        path(d="M0 1 H133 L345 201" stroke="black" stroke-dasharray="15 5" style=" marker-end: url(#MarkerCircle)")
+                    svg(version="1.1" width="393" height="222" viewBox="0 0 393 222" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-eye-arrow__right" preserveAspectRatio="none")
+                        defs
+                            marker( id="MarkerCircle1"  refX="4" refY="4" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto")
+                                circle(cx="4" cy="4" r="4" fill="black")
+                        path(d="M393 221L211.873 221L4 4" stroke="black" stroke-dasharray="15 5" style=" marker-end: url(#MarkerCircle1)")
+                
+                p.section-duration__text.section-duration__text--pos2 
+                    span 1 месяц
+                    span через
+                    span требуется обязательная коррекция татуажа
+
             include ../sections/service/_masters.pug
             include ../sections/_comments.pug
             include ../sections/service/_answers.pug
