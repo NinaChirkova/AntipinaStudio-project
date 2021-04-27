@@ -55,17 +55,36 @@ block content
             //-             span через
             //-             span требуется обязательная #[br]коррекция татуажа
             section.section-duration.section-duration--grey.section-duration--margin
-                .section-duration__item
-                    p.text--huge 
-                        | 3—5 лет
-                    p.text.text--standart 
-                        | сохраняется эффект межресничного татуажа 
-                .section-duration__item
-                    p.text--huge 
-                        | 1 месяц
-                    p.text.text--standart 
-                        | Через 1 месяц требуется обязательная коррекция
-                    
+                //- .section-duration__item
+                //-     p.text--huge 
+                //-         | 3—5 лет
+                //-     p.text.text--standart 
+                //-         | сохраняется эффект межресничного татуажа 
+                //- .section-duration__item
+                //-     p.text--huge 
+                //-         | 1 месяц
+                //-     p.text.text--standart 
+                //-         | Через 1 месяц требуется обязательная коррекция
+
+                .section-duration__text 
+                    span 3-5
+                    span лет
+                    span сохраняется эффект межресничного татуажа
+
+                .img-wrapper.img-wrapper--position
+                    img(src="./img/circle/tatoo-round.png", alt="" width="627" height="627")
+                    svg(version="1.1" width="334" height="70" viewBox="0 0 334 70" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-eyelash__left")
+                        path(d="M0 1 H265 L333.5 69.5" stroke="black" stroke-dasharray="15 5")
+                .section-duration__text 
+                    span 1 месяц
+                    span через
+                    span требуется обязательная коррекция татуажа
+
+
+
             
             include ../sections/service/_stages.pug
             include ../sections/service/_masters.pug
