@@ -15,7 +15,9 @@
 .svg-eyelash__left,
 .svg-eye-arrow__left,
 .svg-eyelash__right,
-.svg-eye-arrow__right {
+.svg-eye-arrow__right,
+.svg-arrows-shadow__left,
+.svg-arrows-shadow__right {
     display: none;
 }
 
@@ -24,7 +26,9 @@
     .svg-eyelash__left,
     .svg-eye-arrow__left,
     .svg-eyelash__right,
-    .svg-eye-arrow__right {
+    .svg-eye-arrow__right,
+    .svg-arrows-shadow__left,
+    .svg-arrows-shadow__right {
         display: block;
         position: absolute;
     }
@@ -43,6 +47,14 @@
         height: 110px;
     }
 
+    .svg-arrows-shadow__left {        
+        transform: rotateY(180deg);
+        width: 259px;
+        top: 65px;
+        left: 145px;
+        height: 140px;
+    }
+
     .svg-eyelash__right {
         top: 112px;
         right: -160px; 
@@ -53,6 +65,13 @@
         right: -76px;
         height: 110px;
         width: 300px;
+    }
+
+    .svg-arrows-shadow__right {
+        top: 239px;
+        right: -76px;
+        height: 93px;
+        width: 312px;
     }
 }
 
@@ -73,6 +92,14 @@
         left: -123px;
     }
 
+    .svg-arrows-shadow__left {
+        transform: rotateY(0deg);
+        width: 300px;
+        height: 157px;
+        top: 66px;
+        left: -147px;
+    }
+
     .svg-eyelash__right {
         height: 200px;
         top: 123px;
@@ -84,6 +111,13 @@
         top: 240px;
         right: 28px;
         width: 201px;
+    }
+
+    .svg-arrows-shadow__right {
+        height: 120px;
+        top: 259px;
+        right: 28px;
+        width: 228px;
     }
 }
 
@@ -102,6 +136,13 @@
         left: -146px;
     }
 
+    .svg-arrows-shadow__left {
+        height: auto;
+        width: 380px;
+        top: 116px;
+        left: -164px;
+    }
+
     .svg-eyelash__right {
         height: 134px;
         width: 173px;
@@ -113,6 +154,13 @@
         height: 134px;
         width: 360px;
         top: 346px;
+        right: -15px;
+    }
+
+    .svg-arrows-shadow__right {
+        height: 110px;
+        width: 384px;
+        top: 373px;
         right: -15px;
     }
 }
@@ -132,6 +180,13 @@
         right: 35px;
     }
 
+    .svg-arrows-shadow__right {
+        width: fit-content;
+        height: auto;
+        top: 465px;
+        right: 35px;
+    }
+
     .svg-eyelash__left {
         width: auto;
         top: 130px;
@@ -139,6 +194,13 @@
     }
 
     .svg-eye-arrow__left {
+        width: fit-content;
+        height: auto;
+        top: 146px;
+        left: -140px;
+    }
+
+    .svg-arrows-shadow__left {
         width: fit-content;
         height: auto;
         top: 146px;
