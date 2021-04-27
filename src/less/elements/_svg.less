@@ -13,8 +13,75 @@
 }
 
 .svg-eyelash__left {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: 1px solid black;
+    display: none;
 }
+
+.svg-eyelash__right {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .svg-eyelash__left {
+        display: block;
+        position: absolute;
+        transform: rotateY(180deg);
+        width: 300px;
+        top: 48px;
+        left: 82px;
+    }
+
+    .svg-eyelash__right {
+        display: block;
+        position: absolute;
+        top: 112px;
+        right: -160px; 
+    }
+}
+
+@media(min-width: 1200px) {
+    .svg-eyelash__left {
+        transform: rotateY(0deg);
+        width: fit-content;
+        height: 115px;
+        top: 10px;
+        left: -220px;
+    }
+
+    .svg-eyelash__right {
+        height: 200px;
+        top: 123px;
+        right: -155px;
+    }
+}
+
+@media(min-width: 1400px) {
+    .svg-eyelash__left {
+        height: auto;
+        width: 240px;
+        top: 111px;
+        left: -80px;
+    }
+
+    .svg-eyelash__right {
+        height: 134px;
+        width: 173px;
+        top: 188px;
+        right: -32px;
+    }
+}
+
+@media(min-width: 1700px) {
+    .svg-eyelash__right {
+        width: auto;
+        height: auto;
+        top: 225px;
+        right: -52px;
+    }
+
+    .svg-eyelash__left {
+        width: auto;
+        top: 130px;
+        left: -140px;
+    }
+}
+

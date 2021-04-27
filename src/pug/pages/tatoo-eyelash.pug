@@ -42,43 +42,33 @@ block content
             include ../sections/tatoo-eyelash/_about.pug
             include ../sections/service/_insta.pug
 
-            //- section.section-duration
-            //-     .section-duration__wrapper.section-duration__wrapper--flex.section-duration__wrapper--margin
-            //-         p.section-duration__text 
-            //-             span 3-5 
-            //-             span лет
-            //-             span сохраняется эффект #[br]межресничного татуажа
-            //-         .section-duration__img
-            //-             img(src="../img/service-cards/tatoo-round.png", alt="tatoo-round" width="627" height="627")
-            //-         p.section-duration__text 
-            //-             span 1 месяц 
-            //-             span через
-            //-             span требуется обязательная #[br]коррекция татуажа
-            section.section-duration.section-duration--grey.section-duration--margin
-                //- .section-duration__item
-                //-     p.text--huge 
-                //-         | 3—5 лет
-                //-     p.text.text--standart 
-                //-         | сохраняется эффект межресничного татуажа 
-                //- .section-duration__item
-                //-     p.text--huge 
-                //-         | 1 месяц
-                //-     p.text.text--standart 
-                //-         | Через 1 месяц требуется обязательная коррекция
+            section.section-duration.section-duration--margin
 
-                .section-duration__text 
+                p.section-duration__text.section-duration__text--pos1 
                     span 3-5
                     span лет
-                    span сохраняется эффект межресничного татуажа
+                    span сохраняется эффект#[br] межресничного татуажа
 
-                .img-wrapper.img-wrapper--position
+                .section-duration__img.section-duration__img--position.section-duration__img--size
                     img(src="./img/circle/tatoo-round.png", alt="" width="627" height="627")
-                    svg(version="1.1" width="334" height="70" viewBox="0 0 334 70" fill="none"
+                    svg(version="1.1" width="339" height="75" viewBox="0 0 339 75" fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-eyelash__left")
-                        path(d="M0 1 H265 L333.5 69.5" stroke="black" stroke-dasharray="15 5")
-                .section-duration__text 
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-eyelash__left" preserveAspectRatio="none")
+                        defs 
+                            marker( id="MarkerCircle"  refX="4" refY="4" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto")
+                                circle(cx="4" cy="4" r="4" fill="black")
+                        path(d="M0 1 H265 L333.5 69.5" stroke="black" stroke-dasharray="15 5" style=" marker-end: url(#MarkerCircle)")
+                    svg(version="1.1" width="262" height="151" viewBox="0 0 262 151" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-eyelash__right" preserveAspectRatio="none")
+                        defs
+                            marker( id="MarkerCircle1"  refX="4" refY="4" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto")
+                                circle(cx="4" cy="4" r="4" fill="black")
+                        path(d="M261.5 150.5L151 150.5 L4 4" stroke="black" stroke-dasharray="15 5" style=" marker-end: url(#MarkerCircle1)")
+                
+                p.section-duration__text.section-duration__text--pos1 
                     span 1 месяц
                     span через
                     span требуется обязательная коррекция татуажа
