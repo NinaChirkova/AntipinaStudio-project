@@ -11,6 +11,10 @@
         border-bottom: 1px solid #000000;
         padding-left: 30px;
 
+        &--margin {
+            margin-top: 100px;
+        }
+
         li {
             width: 100%;
             padding-right: 30px;
@@ -59,9 +63,12 @@
         }
 
         @media(min-width: 1500px) { 
-            border-bottom: none;           
+            border-bottom: none;        
             li {
                 width: 25%;
+            }
+
+            li:nth-child(n+5) {
                 border-bottom: 1px solid #000000;
             }
         }

@@ -2,6 +2,10 @@
     position: relative;
     color: #000000;
 
+    &--pad {
+        padding-left: 15px;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -41,6 +45,12 @@
 
         &--arrow-right {
             padding-right: 80px;
+        }
+    }
+
+    @media(min-width: 992px) {
+        &--pad {
+            padding-left: 0;
         }
     }
 }

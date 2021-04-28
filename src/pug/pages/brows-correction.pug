@@ -43,17 +43,36 @@ block content
                             | бесплатная консультация
             include ../sections/brows/correction/_about.pug
             include ../sections/brows/correction/_tatoo-help.pug           
-            section.section-duration.section-duration--grey.section-duration--margin
-                .section-duration__item
-                    p.text--huge 
-                        | до 2 лет
-                    p.text.text--standart 
-                        | держится результат
-                .section-duration__item
-                    p.text--huge 
-                        | 1 месяц
-                    p.text.text--standart 
-                        | Через 1 месяц требуется обязательная коррекция
+            section.section-duration.section-duration--margin
+
+                p.section-duration__text.section-duration__text--pos7 
+                    span до 2
+                    span лет
+                    span держится результат
+
+                .section-duration__img.section-duration__img--position.section-duration__img--size
+                    img(src="./img/circle/brows-correction.png", alt="" width="627" height="627" loading="lazy")
+                    svg(version="1.1" width="339" height="75" viewBox="0 0 334 70" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-brows-correction__left" preserveAspectRatio="none")
+                        defs 
+                            marker( id="MarkerCircle"  refX="4" refY="4" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto")
+                                circle(cx="4" cy="4" r="4" fill="black")
+                        path(d="M0 1 H265 L333.5 69.5" stroke="black" stroke-dasharray="15 5" style=" marker-end: url(#MarkerCircle)")
+                    svg(version="1.1" width="262" height="151" viewBox="0 0 262 151" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-brows-correction__right" preserveAspectRatio="none")
+                        defs
+                            marker( id="MarkerCircle1"  refX="4" refY="4" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto")
+                                circle(cx="4" cy="4" r="4" fill="black")
+                        path(d="M261.5 150.5L151 150.5 L4 4" stroke="black" stroke-dasharray="15 5" style=" marker-end: url(#MarkerCircle1)")
+                
+                p.section-duration__text.section-duration__text--pos7 
+                    span 1 месяц
+                    span через
+                    span требуется обязательная коррекция татуажа
                     
             
             include ../sections/brows/correction/_stages.pug

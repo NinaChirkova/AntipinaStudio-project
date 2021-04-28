@@ -43,17 +43,37 @@ block content
                             | бесплатная консультация
             include ../sections/lips/watercolor/_about.pug
             include ../sections/lips/lipstick/_insta.pug
-            section.section-duration.section-duration--grey.section-duration--margin.block--bottom-line
-                .section-duration__item
-                    p.text--huge 
-                        | 3 года
-                    p.text.text--standart 
-                        | сохраняется результат татуажа
-                .section-duration__item
-                    p.text--huge 
-                        | 1 месяц
-                    p.text.text--standart 
-                        | Через 1 месяц требуется обязательная коррекция
+            section.section-duration.section-duration--margin.section-duration--bottom-line
+
+                p.section-duration__text.section-duration__text--pos9 
+                    span 3 года
+                    span результат
+                    span сохраняется результат татуажа
+
+                .section-duration__img.section-duration__img--position.section-duration__img--size
+                    img(src="./img/circle/lipstick-watercolor.png", alt="" width="627" height="627" loading="lazy")
+                    svg(version="1.1" width="339" height="75" viewBox="0 0 334 70" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-lipstick-watercolor__left" preserveAspectRatio="none")
+                        defs 
+                            marker( id="MarkerCircle"  refX="4" refY="4" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto")
+                                circle(cx="4" cy="4" r="4" fill="black")
+                        path(d="M0 1 H265 L333.5 69.5" stroke="black" stroke-dasharray="15 5" style=" marker-end: url(#MarkerCircle)")
+                    svg(version="1.1" width="262" height="151" viewBox="0 0 262 151" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns:ev="http://www.w3.org/2001/xml-events" class="svg-lipstick-watercolor__right" preserveAspectRatio="none")
+                        defs
+                            marker( id="MarkerCircle1"  refX="4" refY="4" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto")
+                                circle(cx="4" cy="4" r="4" fill="black")
+                        path(d="M261.5 150.5L151 150.5 L4 4" stroke="black" stroke-dasharray="15 5" style=" marker-end: url(#MarkerCircle1)")
+                
+                p.section-duration__text.section-duration__text--pos9 
+                    span 1 месяц
+                    span через
+                    span требуется обязательная коррекция татуажа
+                    
             section
                 ul.list.list--font-light.list--flex.list--line
                     li.list__item.list__item--check.list__item--margin1
