@@ -9,6 +9,27 @@
     z-index: -1;
     transition: width 0.8s ease;
 
+    &__wrapper {
+        max-height: 100vh;        
+        overflow-y: scroll;
+        &--customized-scroll::-webkit-scrollbar {
+            width: 9px;
+            background-color: #f2f2f2;
+        }
+
+        &--customized-scroll::-webkit-scrollbar-thumb {
+            background: #aaaaaa;
+        }
+
+        & .nav__item:hover,
+        & .nav__item:focus {
+            .nav-sub__list {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
     &--pad {
         opacity: 0;
         transition: opacity 0.4s ease-in 0.4s;
@@ -24,12 +45,12 @@
             padding: 12px 60px 60px 50px;  
         }
     }
-    
 
     @media(min-width: 992px) {
         opacity: 1;
         position: relative;
         min-width: 340px;
+        width: 340px;
         height: 100vh;
         background: rgb(255, 255, 255);
         z-index: 3;
@@ -44,7 +65,9 @@
     .nav-aside .nav-aside__wrapper {
         position: fixed;
         z-index: 2;
-        width: auto;        
+        width: inherit;
+        max-height: 100vh;
+        overflow-y: visible;
     }
     .nav-aside--pad {
         padding: 12px 60px 60px 70px;
@@ -53,6 +76,7 @@
 
 
 .nav__list {
+    position: relative;
     // position: fixed;
     list-style-type: none;
     padding-left: 0;
@@ -76,29 +100,57 @@
     }
 }
 
+.nav-sub__list {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 200%;
+    height: 100vh;
+    right: -200%;
+    top: 0;
+    background: #fff;
+    padding-left: 60px;
+    padding-right: 20px;
+    transition: all 0.4s ease-out;
+
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1000%;
+        top: -1000%;
+        left: 0;
+        background: inherit;
+    }
+}
+
 .nav__item {
     position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
 }
 
 .nav__link {
     text-decoration: none;
     font-family: "Circe-Regular";
     font-size: @font-standart;
-    line-height: @line-height-standart;
-    color: black;
+    line-height: 1.2;
+    color: black;    
 }
 
 .nav-toggle {
 	z-index: 5;
 	
 	.ham {
-	  cursor: pointer;
-	  -webkit-tap-highlight-color: transparent;
-	  transition: transform 400ms;
-	  -moz-user-select: none;
-	  -webkit-user-select: none;
-	  -ms-user-select: none;
-	  user-select: none;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 	}
 
 	.hamRotate.active {
@@ -110,14 +162,14 @@
 		.line {
 			stroke: #000000;
 		}
-	 }
+    }
 
 	.line {
-	  fill:none;
-	  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-	  stroke:#ffffff;
-	  stroke-width:3.5;
-	  stroke-linecap:round;
+        fill:none;
+        transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        stroke:#ffffff;
+        stroke-width:3.5;
+        stroke-linecap:round;
 	}
 
 	.ham4 .top {
@@ -157,3 +209,18 @@
     }
 }
 
+body.mouse {
+
+    .nav-aside {
+        &__wrapper {
+            & .nav__item:hover,
+            & .nav__item:focus {
+                .nav-sub__list {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+}

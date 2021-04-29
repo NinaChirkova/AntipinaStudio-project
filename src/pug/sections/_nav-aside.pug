@@ -1,13 +1,31 @@
 nav.nav.nav-aside
-    .nav-aside__wrapper
-        .nav-aside--pad
+    .nav-aside__wrapper.nav-aside__wrapper--customized-scroll
+        .nav-aside--pad.nav-aside--pad
             .logo.logo--d-none
                 img(src="img/Logo.png" alt="Логотип")
             ul.nav__list.nav__list--bottom-line.nav__list--pad.mt-70
                 for item in menuAsideItems 
-                    li.nav__item 
+                    li.nav__item
                         a(href="" + item.url class="nav__link")
-                            | #{item.name}
+                            | #{item.name}                            
+                            if item.name == 'Татуаж бровей'
+                                ul.nav__list.nav-sub__list
+                                    for elem in menuBrows
+                                        li.nav__item 
+                                            a(href="" + elem.url class="nav__link")
+                                                | #{elem.name}
+                            else if item.name == 'Перманентный макияж глаз'
+                                ul.nav__list.nav-sub__list
+                                    for elem in menuEyes
+                                        li.nav__item 
+                                            a(href="" + elem.url class="nav__link")
+                                                | #{elem.name}
+                            else if item.name == 'Перманентный макияж губ'
+                                ul.nav__list.nav-sub__list
+                                    for elem in menuLips
+                                        li.nav__item 
+                                            a(href="" + elem.url class="nav__link")
+                                                | #{elem.name}
             .contacts-menu                     
                 address.contacts-menu__item.contacts-menu__location
                     img(src="./img/icons/location.svg", alt="icon-location")

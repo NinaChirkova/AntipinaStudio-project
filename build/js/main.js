@@ -179,21 +179,21 @@ window.onload = function () {
 
     // Плавная прокрутка
 
-	$(".nav-helper a,a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
-		highlightSelector:".nav-helper a"
-	});
+    $(".nav-helper a,a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
+        highlightSelector: ".nav-helper a"
+    });
 
     // Раскрывающийся список
 
     let btnQuestion = document.querySelectorAll('.collapsible');
 
-    for(let i = 0; i < btnQuestion.length; i++) {
-        btnQuestion[i].addEventListener('click', function() {
+    for (let i = 0; i < btnQuestion.length; i++) {
+        btnQuestion[i].addEventListener('click', function () {
             this.classList.toggle('_active');
 
             let content = this.nextElementSibling;
 
-            if(content.style.maxHeight) {
+            if (content.style.maxHeight) {
                 content.style.maxHeight = null;
                 content.style.borderBottom = 'none';
             } else {
@@ -201,5 +201,36 @@ window.onload = function () {
                 content.style.borderBottom = '1px solid rgba(0, 0, 0, 1)';
             }
         })
+    }
+
+
+
+    let isMobile = {
+        Android: function () { return navigator.userAgent.match(/Android/i); },
+        BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
+        iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+        Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
+        Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
+        any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+    };
+    let body = document.querySelector('body');
+
+    if (isMobile.any()) {
+        body.classList.add('touch');
+        let arrow = document.querySelectorAll('.arrow');
+        for (i = 0; i < arrow.length; i++) {
+            let thisLink = arrow[i].previousElementSibling;
+            let subMenu = arrow[i].nextElementSibling;
+            let thisArrow = arrow[i];
+
+            thisLink.classList.add('parent');
+            arrow[i].addEventListener('click', function () {
+                subMenu.classList.toggle('open');
+                thisArrow.classList.toggle('active');
+            });
+        }
+
+    } else {
+        body.classList.add('mouse');
     }
 };
