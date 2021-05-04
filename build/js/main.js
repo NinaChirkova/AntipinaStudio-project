@@ -217,14 +217,14 @@ window.onload = function () {
 
     if (isMobile.any()) {
         body.classList.add('touch');
-        let arrow = document.querySelectorAll('.arrow');
-        for (i = 0; i < arrow.length; i++) {
-            let thisLink = arrow[i].previousElementSibling;
-            let subMenu = arrow[i].nextElementSibling;
-            let thisArrow = arrow[i];
+        let plusButton = document.querySelectorAll('.plus');
+        for (i = 0; i < plusButton.length; i++) {
+            let thisLink = plusButton[i].previousElementSibling;
+            let subMenu = plusButton[i].nextElementSibling;
+            let thisArrow = plusButton[i];
 
             thisLink.classList.add('parent');
-            arrow[i].addEventListener('click', function () {
+            plusButton[i].addEventListener('click', function () {
                 subMenu.classList.toggle('open');
                 thisArrow.classList.toggle('active');
             });

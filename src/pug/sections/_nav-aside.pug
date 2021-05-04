@@ -7,25 +7,26 @@ nav.nav.nav-aside
                 for item in menuAsideItems 
                     li.nav__item
                         a(href="" + item.url class="nav__link")
-                            | #{item.name}                            
-                            if item.name == 'Татуаж бровей'
-                                ul.nav__list.nav-sub__list
-                                    for elem in menuBrows
-                                        li.nav__item 
-                                            a(href="" + elem.url class="nav__link")
-                                                | #{elem.name}
-                            else if item.name == 'Перманентный макияж глаз'
-                                ul.nav__list.nav-sub__list
-                                    for elem in menuEyes
-                                        li.nav__item 
-                                            a(href="" + elem.url class="nav__link")
-                                                | #{elem.name}
-                            else if item.name == 'Перманентный макияж губ'
-                                ul.nav__list.nav-sub__list
-                                    for elem in menuLips
-                                        li.nav__item 
-                                            a(href="" + elem.url class="nav__link")
-                                                | #{elem.name}
+                            | #{item.name}
+                        span.menu__plus.plus          
+                        if item.name == 'Татуаж бровей'
+                            ul.nav__list.nav-sub__list
+                                for elem in menuBrows
+                                    li.nav__item 
+                                        a(href="" + elem.url class="nav__link")
+                                            | #{elem.name}
+                        else if item.name == 'Перманентный макияж глаз'
+                            ul.nav__list.nav-sub__list
+                                for elem in menuEyes
+                                    li.nav__item 
+                                        a(href="" + elem.url class="nav__link")
+                                            | #{elem.name}
+                        else if item.name == 'Перманентный макияж губ'
+                            ul.nav__list.nav-sub__list
+                                for elem in menuLips
+                                    li.nav__item 
+                                        a(href="" + elem.url class="nav__link")
+                                            | #{elem.name}
             .contacts-menu                     
                 address.contacts-menu__item.contacts-menu__location
                     img(src="./img/icons/location.svg", alt="icon-location")

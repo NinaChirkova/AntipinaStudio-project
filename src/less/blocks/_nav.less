@@ -224,3 +224,38 @@ body.mouse {
     }
     
 }
+
+.plus {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        background: #000;
+    }
+
+    &:before {        
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 100%;        
+    }
+
+    &:after {        
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 1px;        
+    }
+}
+
+.menu__plus {
+
+}
