@@ -1,6 +1,6 @@
 nav.nav.nav-aside
     .nav-aside__wrapper.nav-aside__wrapper--customized-scroll
-        .nav-aside--pad.nav-aside--pad
+        .nav-aside--pad
             .logo.logo--d-none
                 img(src="img/Logo.png" alt="Логотип")
             ul.nav__list.nav__list--bottom-line.nav__list--pad.mt-70
@@ -8,7 +8,7 @@ nav.nav.nav-aside
                     li.nav__item
                         a(href="" + item.url class="nav__link")
                             | #{item.name}
-                        span.menu__plus.plus          
+                        //- span.menu__plus.plus         
                         if item.name == 'Татуаж бровей'
                             ul.nav__list.nav-sub__list
                                 for elem in menuBrows

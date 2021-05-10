@@ -79,12 +79,15 @@ window.onload = function () {
     var mobile = $('.contacts');
     var menuFixed = 'contacts--mob-fixed';
     var logoSvg = $('.logo-svg .logo-text');
+    var subMenu = $('.nav-sub__list');
+    var navMobile = $('.nav-mobile');
 
     navToggleButton.on('click', function (e) {
         e.preventDefault();
         navList.toggleClass(navListOpen);
         mobile.toggleClass(menuFixed);
-        logoSvg.addClass('logo-text--dark');
+        logoSvg.toggleClass('logo-text--dark');
+        navMobile.toggleClass('nav-mobile--bg-white');
 
         navButtonToggle();
     });
@@ -93,11 +96,16 @@ window.onload = function () {
 
         if (navToggleSvg.hasClass("active")) {
             navButtonToggle();
-        }
+        };
+
+        if (subMenu.hasClass('nav-sub__list--open')) {
+            subMenu.removeClass('nav-sub__list--open');
+        };
 
         navList.removeClass(navListOpen);
         mobile.removeClass(menuFixed);
         logoSvg.removeClass('logo-text--dark');
+        navMobile.removeClass('nav-mobile--bg-white');
 
     });
 
@@ -215,18 +223,30 @@ window.onload = function () {
     };
     let body = document.querySelector('body');
 
-    if (isMobile.any()) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
         body.classList.add('touch');
-        let plusButton = document.querySelectorAll('.plus');
-        for (i = 0; i < plusButton.length; i++) {
-            let thisLink = plusButton[i].previousElementSibling;
-            let subMenu = plusButton[i].nextElementSibling;
-            let thisArrow = plusButton[i];
 
-            thisLink.classList.add('parent');
+        let menuItem = document.querySelectorAll('.nav-aside--pad>.nav__list>.nav__item');
+
+        for (let i = 0; i < menuItem.length; i++) {
+            if (menuItem[i].querySelector('.nav-sub__list')) {
+                let plusButon = document.createElement('span');
+                plusButon.className = 'plus menu__plus';
+                menuItem[i].append(plusButon);
+            }
+        }
+
+        let plusButton = document.querySelectorAll('.plus');
+
+        for (i = 0; i < plusButton.length; i++) {
+            // let thisLink = plusButton[i].previousElementSibling;
+            let subMenu = plusButton[i].previousElementSibling;
+            console.log(plusButton[i]);
+            let thisButton = plusButton[i];
+
             plusButton[i].addEventListener('click', function () {
-                subMenu.classList.toggle('open');
-                thisArrow.classList.toggle('active');
+                subMenu.classList.toggle('nav-sub__list--open');
+                thisButton.classList.toggle('active');
             });
         }
 
