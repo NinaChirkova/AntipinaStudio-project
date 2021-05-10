@@ -191,47 +191,8 @@
     }
 }
 
+body.touch,
 body.mouse {
-
-    .nav-sub__list {
-        visibility: hidden;
-        opacity: 0;
-        position: absolute;
-        width: 200%;
-        height: 100vh;
-        right: -200%;
-        top: 0;
-        background: #fff;
-        padding-left: 60px;
-        padding-right: 20px;
-        transition: all 0.4s ease-out;
-    
-        &:before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 1000%;
-            top: -1000%;
-            left: 0;
-            background: inherit;
-        }
-    }
-
-    .nav-aside {
-        &__wrapper {
-            & .nav__item:hover,
-            & .nav__item:focus {
-                .nav-sub__list {
-                    visibility: visible;
-                    opacity: 1;
-                }
-            }
-        }
-    }
-    
-}
-
-body.touch {
     .nav-sub__list {
         display: none;
         margin-top: 15px;
@@ -244,25 +205,70 @@ body.touch {
     }
 }
 
+body.mouse {
+
+    @media(min-width: 992px) {
+        .nav-sub__list {
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            width: 200%;
+            height: 100vh;
+            right: -200%;
+            top: 0;
+            background: #fff;
+            padding-left: 60px;
+            padding-right: 20px;
+            transition: all 0.4s ease-out;
+        
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1000%;
+                top: -1000%;
+                left: 0;
+                background: inherit;
+            }
+        }
+        
+        .nav-aside {
+            &__wrapper {
+                & .nav__item:hover,
+                & .nav__item:focus {
+                    .nav-sub__list {
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .plus {
     position: relative;
     display: inline-block;
     width: 10px;
     height: 10px;
     background: transparent;
+    margin-left: 10px;
     cursor: pointer;
+    transition: all 0.3s linear;
 
     &:before,
     &:after {
         content: "";
         position: absolute;
         background: #000;
+        transition: all 0.3s linear;
     }
 
     &:before {        
         top: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) rotate(0deg);
         width: 1px;
         height: 100%;        
     }
@@ -273,6 +279,12 @@ body.touch {
         transform: translateY(-50%);
         width: 100%;
         height: 1px;        
+    }
+
+    &.active {
+        &:before {
+            transform: translateX(-50%) rotate(90deg);
+        }
     }
 }
 

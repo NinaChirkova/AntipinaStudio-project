@@ -7,8 +7,7 @@ nav.nav.nav-aside
                 for item in menuAsideItems 
                     li.nav__item
                         a(href="" + item.url class="nav__link")
-                            | #{item.name}
-                        //- span.menu__plus.plus         
+                            | #{item.name}        
                         if item.name == 'Татуаж бровей'
                             ul.nav__list.nav-sub__list
                                 for elem in menuBrows

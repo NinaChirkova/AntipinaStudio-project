@@ -106,7 +106,6 @@ window.onload = function () {
         mobile.removeClass(menuFixed);
         logoSvg.removeClass('logo-text--dark');
         navMobile.removeClass('nav-mobile--bg-white');
-
     });
 
     function navButtonToggle() {
@@ -213,17 +212,18 @@ window.onload = function () {
 
 
 
-    let isMobile = {
-        Android: function () { return navigator.userAgent.match(/Android/i); },
-        BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
-        iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-        Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
-        Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
-        any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
-    };
+    // let isMobile = {
+    //     Android: function () { return navigator.userAgent.match(/Android/i); },
+    //     BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); },
+    //     iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+    //     Opera: function () { return navigator.userAgent.match(/Opera Mini/i); },
+    //     Windows: function () { return navigator.userAgent.match(/IEMobile/i); },
+    //     any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+    // };
     let body = document.querySelector('body');
+    let viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    if ((/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) || (viewportWidth < 992)) {
         body.classList.add('touch');
 
         let menuItem = document.querySelectorAll('.nav-aside--pad>.nav__list>.nav__item');
@@ -232,21 +232,30 @@ window.onload = function () {
             if (menuItem[i].querySelector('.nav-sub__list')) {
                 let plusButon = document.createElement('span');
                 plusButon.className = 'plus menu__plus';
-                menuItem[i].append(plusButon);
+                menuItem[i].firstElementChild.after(plusButon);
             }
         }
 
         let plusButton = document.querySelectorAll('.plus');
+        let menuLinks = document.querySelectorAll('.nav__link');
 
         for (i = 0; i < plusButton.length; i++) {
-            // let thisLink = plusButton[i].previousElementSibling;
-            let subMenu = plusButton[i].previousElementSibling;
-            console.log(plusButton[i]);
+            let subMenu = plusButton[i].nextElementSibling;
             let thisButton = plusButton[i];
 
             plusButton[i].addEventListener('click', function () {
                 subMenu.classList.toggle('nav-sub__list--open');
                 thisButton.classList.toggle('active');
+            });
+        }
+        for (i = 0; i < menuLinks.length; i++) {
+            menuLinks[i].addEventListener('click', function () {
+
+                for (i = 0; i < plusButton.length; i++) {
+                    if (plusButton[i].classList.contains('active')) {
+                        plusButton[i].classList.remove('active');
+                    }
+                }
             });
         }
 
