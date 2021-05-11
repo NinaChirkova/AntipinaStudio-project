@@ -7,6 +7,10 @@
         flex-wrap: wrap;
     }
 
+    &--bottom-line {
+        border-bottom: 1px solid #000000;
+    }
+
     &--advantages {
         border-bottom: 1px solid #000000;
         padding-left: 30px;
@@ -63,7 +67,8 @@
         }
 
         @media(min-width: 1500px) { 
-            border-bottom: none;        
+            border-bottom: none;
+            
             li {
                 width: 25%;
             }
@@ -268,9 +273,47 @@
         }
     }
 
+    @media(min-width: 1500px) {
+        &--bottom-line {
+            border-bottom: 1px solid #000000;
+        }
+    }
+
     @media(min-width: 1700px) {
         &--service-descr {
             font-size: 24px;
+        }
+    }
+}
+
+.list-services {
+
+    .list__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .list__item {
+        font-size: 17px;
+        a {
+            color: inherit;
+        }
+    }
+
+    @media(min-width: 768px) {
+        .list__item {
+            font-size: 19px;
+        }
+    }
+
+    @media(min-width: 992px) {
+        .list__item {
+            font-size: 20px;
+        }
+    }
+
+    @media(min-width: 1300px) {
+        .list__item {
+            font-size: 21px;
         }
     }
 }

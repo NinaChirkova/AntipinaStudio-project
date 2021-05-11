@@ -1,0 +1,93 @@
+extends ../layouts/main.pug
+
+block variables 
+    -var title = "Услуги";
+    -
+        menuAsideItems = [
+            {"name": "Главная", "url" : "#"},
+            {"name": "Перманентный макияж глаз", "url" : "#"},
+            {"name": "Татуаж бровей", "url" : "#"},
+            {"name": "Перманентный макияж губ", "url" : "#"},
+            {"name": "Удаление татуажа", "url" : "#"},
+            {"name": "Татуировки", "url" : "#"},
+            {"name": "Пирсинг", "url" : "#"},
+            {"name": "Контакты", "url" : "#"}
+        ];
+    -
+        menuBrows = [
+            {"name": "Архитектура и коррекция бровей", "url" : "#"},
+            {"name": "Волосковый татуаж бровей", "url" : "#"},
+            {"name": "Микроблейдинг бровей", "url" : "#"},
+            {"name": "Татуаж бровей в смешанной технике: растушёвка + волоски", "url" : "#"}
+        ];
+    -
+        menuEyes = [
+            {"name": "Татуаж стрелок с растушевкой", "url" : "#"},
+            {"name": "Татуаж стрелок на глазах", "url" : "#"},
+            {"name": "Татуаж межресничного пространства", "url" : "#"}
+        ]
+    -
+        menuLips = [
+            {"name": "Татуаж губ в акварельной технике", "url" : "#"},
+            {"name": "Татуаж губ в помадной технике", "url" : "#"}
+        ]
+
+block content 
+
+    .content-container.d-flex.flex-no-wrap
+        include ../sections/_nav-aside.pug
+
+        main.content-container__main
+            header.header
+                .header__img 
+                    img(src="../img/big-size/services-bg.jpg", alt="" class="img img-stopper")
+
+                include ../sections/_contacts.pug
+
+                .header__title
+                    h2.title--header.anim-item._anim-no-hide
+                        | Услуги
+                    
+            section.menu-inner.menu-inner__wrapper.menu-inner--margin.menu-inner__wrapper--pad
+                .menu-inner__block.menu-inner__block--margin-right
+                    h2.title.title--pos-left
+                        | Брови
+                    ul.list.list-services.text.text--light
+                        li.list__item
+                            a(href="#modal" class="open-modal") Комбинированная техника
+                        li.list__item
+                            a(href="#modal" class="open-modal") Волосковая техника
+                        li.list__item
+                            a(href="#modal" class="open-modal") Коррекция бровей
+                        li.list__item
+                            a(href="#modal" class="open-modal") Микроблейдинг
+                        li.list__item
+                            a(href="#modal" class="open-modal") Татуаж бровей
+                .menu-inner__block.menu-inner__block--margin-right
+                    h2.title.title--pos-left
+                        | Глаза
+                    ul.list.list-services.text.text--light
+                        li.list__item
+                            a(href="#modal" class="open-modal") Перманентный макияж глаз
+                        li.list__item
+                            a(href="#modal" class="open-modal") Стрелки + растушевка
+                        li.list__item
+                            a(href="#modal" class="open-modal") Межресничка
+                        li.list__item
+                            a(href="#modal" class="open-modal") Стрелки
+                .menu-inner__block.menu-inner__block--margin-right
+                    h2.title.title--pos-left
+                        | Губы
+                    ul.list.list-services.text.text--light
+                        li.list__item
+                            a(href="#modal" class="open-modal") Перманентный макияж губ
+                        li.list__item
+                            a(href="#modal" class="open-modal") Помадная техника
+                        li.list__item
+                            a(href="#modal" class="open-modal") Акварельная техника
+            include ../sections/_events.pug
+            include ../sections/_address.pug
+            include ../sections/_footer.pug
+
+    include ../sections/_svg.pug
+    include ../sections/_modal.pug

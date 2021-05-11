@@ -1,0 +1,61 @@
+extends ../layouts/main.pug
+
+block variables 
+    -var title = "Контакты";
+    -
+        menuAsideItems = [
+            {"name": "Главная", "url" : "#"},
+            {"name": "Перманентный макияж глаз", "url" : "#"},
+            {"name": "Татуаж бровей", "url" : "#"},
+            {"name": "Перманентный макияж губ", "url" : "#"},
+            {"name": "Удаление татуажа", "url" : "#"},
+            {"name": "Татуировки", "url" : "#"},
+            {"name": "Пирсинг", "url" : "#"},
+            {"name": "Контакты", "url" : "#"}
+        ];
+    -
+        menuBrows = [
+            {"name": "Архитектура и коррекция бровей", "url" : "#"},
+            {"name": "Волосковый татуаж бровей", "url" : "#"},
+            {"name": "Микроблейдинг бровей", "url" : "#"},
+            {"name": "Татуаж бровей в смешанной технике: растушёвка + волоски", "url" : "#"}
+        ];
+    -
+        menuEyes = [
+            {"name": "Татуаж стрелок с растушевкой", "url" : "#"},
+            {"name": "Татуаж стрелок на глазах", "url" : "#"},
+            {"name": "Татуаж межресничного пространства", "url" : "#"}
+        ]
+    -
+        menuLips = [
+            {"name": "Татуаж губ в акварельной технике", "url" : "#"},
+            {"name": "Татуаж губ в помадной технике", "url" : "#"}
+        ]
+
+block content 
+
+    .content-container.d-flex.flex-no-wrap
+        include ../sections/_nav-aside.pug
+
+        main.content-container__main
+            header.header
+                .header__img 
+                    img(src="../img/big-size/contacts-bg.jpg", alt="" class="img img-stopper img-stopper--pos1")
+
+                include ../sections/_contacts.pug
+
+                .header__title
+                    h2.title--header.anim-item._anim-no-hide
+                        | Контакты
+                    .btn__wrapper.btn__wrapper--row.btn__wrapper--margin
+                        button(class="btn btn--light btn--size-header btn--mt20" type="button")
+                            | ЗАПИСЬ
+                        button(class="btn btn--dark btn--size-header" type="button")
+                            | бесплатная консультация
+            
+            include ../sections/contacts/_advantages-section.pug
+            include ../sections/contacts/_tatoo-help.pug
+            include ../sections/_form.pug
+            include ../sections/_footer.pug
+
+    include ../sections/_svg.pug

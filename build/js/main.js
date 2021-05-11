@@ -81,6 +81,7 @@ window.onload = function () {
     var logoSvg = $('.logo-svg .logo-text');
     var subMenu = $('.nav-sub__list');
     var navMobile = $('.nav-mobile');
+    var buttonPlus = $('plus');
 
     navToggleButton.on('click', function (e) {
         e.preventDefault();
@@ -261,5 +262,53 @@ window.onload = function () {
 
     } else {
         body.classList.add('mouse');
+    }
+
+
+    // Modal
+
+    const modalLinks = document.querySelectorAll('.open-modal');
+    const bodyElem = document.querySelector('body');
+    const lockPadding = document.querySelectorAll('.lock-padding');
+
+    if (modalLinks.length > 0) {
+        for (let i = 0; i < modalLinks.length; i++) {
+            const currentLink = modalLinks[i];
+
+            currentLink.addEventListener('click', function (e) {
+                const modalName = currentLink.getAttribute('href').replace('#', "");
+                const targetModal = document.getElementById(modalName);
+                modalOpen(targetModal);
+                e.preventDefault();
+            })
+        }
+    }
+
+    const modalCloseIcon = document.querySelectorAll('.modal__close');
+
+    if (modalCloseIcon.length > 0) {
+        for (let i = 0; i < modalCloseIcon.length; i++) {
+            const currentEl = modalCloseIcon[i];
+
+            currentEl.addEventListener('click', function () {
+                modalClose(currentEl.closest('.modal'));
+            })
+        }
+    }
+
+    function modalOpen(targetModal) {
+        if (targetModal) {
+            targetModal.classList.add('open');
+            targetModal.addEventListener(('click'), function (e) {
+                if (!e.target.closest('.modal__content')) {
+                    modalClose(e.target.closest('.modal'));
+                }
+            })
+        }
+
+    }
+
+    function modalClose(targetModal) {
+        targetModal.classList.remove('open');
     }
 };
